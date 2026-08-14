@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "void_things:empty_ingot",
+			"count": 9
+		}
+	],
+	"result": {
+		"item": "void_things:empty_ingot_block",
+		"count": 1
+	}
+}
