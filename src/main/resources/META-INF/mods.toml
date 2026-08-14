@@ -1,0 +1,50 @@
+# ============================================
+# 模组加载配置文件 (mods.toml)
+# 格式：TOML (https://github.com/toml-lang/toml)
+# ============================================
+
+# -------- 模组加载器 --------
+modLoader = "javafml"                              # Forge 模组加载器
+loaderVersion = "${loader_version_range}"          # Forge 加载器版本范围
+
+# -------- 许可证 --------
+license = "${mod_license}"                         # 模组许可证
+
+
+# ============================================
+# 模组主体信息
+# ============================================
+[[mods]]
+modId = "${mod_id}"                                # 模组唯一标识（必须全小写）
+version = "${mod_version}"                         # 模组版本号
+displayName = "${mod_name}"                        # 在游戏中显示的名称
+authors = "${mod_authors}"                         # 作者
+description = """${mod_description}"""             # 模组描述（支持多行）
+
+
+# ============================================
+# 依赖关系
+# ============================================
+
+# -------- 依赖 1：Forge（必须） --------
+[[dependencies.${mod_id}]]
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+# -------- 依赖 2：Minecraft（必须） --------
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+
+# ============================================
+# （可选）特性声明
+# ============================================
+# [features.${mod_id}]
+# openGLVersion = "[3.2,)"

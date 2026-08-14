@@ -1,0 +1,18 @@
+// 插件管理
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+		maven {
+			name = "MinecraftForge"
+			url = "https://maven.minecraftforge.net/"
+		}
+	}
+}
+
+// 插件
+plugins {
+	id "org.gradle.toolchains.foojay-resolver-convention" version "0.7.0"
+}
+
+// 根项目名称
+rootProject.name = "void_things"
