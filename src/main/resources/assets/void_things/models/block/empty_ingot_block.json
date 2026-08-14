@@ -1,0 +1,13 @@
+{
+	"parent": "block/cube",
+	"render_type": "cutout",
+	"textures": {
+		"particle": "void_things:block/material/empty_ingot_blcok/bottom",
+		"down": "void_things:block/material/empty_ingot_blcok/bottom",
+		"up": "void_things:block/material/empty_ingot_blcok/top",
+		"north": "void_things:block/material/empty_ingot_blcok/side",
+		"south": "void_things:block/material/empty_ingot_blcok/side",
+		"west": "void_things:block/material/empty_ingot_blcok/side",
+		"east": "void_things:block/material/empty_ingot_blcok/side"
+	}
+}
