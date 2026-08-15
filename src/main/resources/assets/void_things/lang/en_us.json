@@ -4,7 +4,13 @@
 	"item.void_things.empty_ingot": "Empty Ingot",
 	"item.void_things.empty_nugget": "Empty Nugget",
 	"item.void_things.empty_shard": "Empty Shard",
+	"item.void_things.empty_stick": "Empty Stick",
+	"item.void_things.empty_plate": "Empty Plate",
 
 	"block.void_things.empty_ingot_block": "Empty Ingot Block",
-	"block.void_things.void_bedrock": "Void Bedrock"
+	"block.void_things.void_bedrock": "Void Bedrock",
+	"block.void_things.bedstone": "Bedstone",
+	"block.void_things.bedstone_brick": "Bedstone Brick",
+	"block.void_things.controller": "Controller",
+	"block.void_things.safety_glass": "Safety Glass"
 }

@@ -1,5 +1,6 @@
-package nothing.xiaofan_delta.void_things.common.event;
+package nothing.xiaofan_delta.void_things.event;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -17,9 +18,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import nothing.xiaofan_delta.void_things.VoidThings;
 import nothing.xiaofan_delta.void_things.common.register.VTItems;
 import nothing.xiaofan_delta.void_things.common.register.VTBlocks;
+import nothing.xiaofan_delta.void_things.config.CommonConfig;
 
 @Mod.EventBusSubscriber(modid = VoidThings.MODID)
 public class VoidBedrockHandler {
@@ -37,8 +40,9 @@ public class VoidBedrockHandler {
 
 		// 3. 检查是否拿着下界合金镐
 		ItemStack heldItem = player.getMainHandItem();
-		if (!heldItem.is(Items.NETHERITE_PICKAXE)) {
-			return;  // 不是下界合金镐，无反应
+		ResourceLocation heldItemId = ForgeRegistries.ITEMS.getKey(heldItem.getItem());
+		if (heldItemId == null || !CommonConfig.VOID_BEDROCK_USABLE_ITEMS_SET.contains(heldItemId)) {
+			return;  // 物品不在配置列表中，无反应
 		}
 
 		// 4. 防止在服务端逻辑中重复触发（只处理服务端）

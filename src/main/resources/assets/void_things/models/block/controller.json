@@ -1,0 +1,169 @@
+{
+	"texture_size": [64, 64],
+	"textures": {
+		"particle": "void_things:block/deco/controller",
+		"controller": "void_things:block/deco/controller"
+	},
+	"elements": [
+		{
+			"name": "Main",
+			"from": [1, 0, 1],
+			"to": [15, 15, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 0, 1]},
+			"faces": {
+				"north": {"uv": [0, 0, 3.5, 3.75], "texture": "#controller"},
+				"east": {"uv": [3.5, 0, 7, 3.75], "texture": "#controller"},
+				"south": {"uv": [0, 3.75, 3.5, 7.5], "texture": "#controller"},
+				"west": {"uv": [3.5, 3.75, 7, 7.5], "texture": "#controller"},
+				"up": {"uv": [10.5, 3.5, 7, 0], "texture": "#controller"},
+				"down": {"uv": [10.5, 3.5, 7, 7], "texture": "#controller"}
+			}
+		},
+		{
+			"name": "Screen1",
+			"from": [2, 6, 15],
+			"to": [14, 14, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10, 15.5]},
+			"faces": {
+				"north": {"uv": [7, 7, 10, 9], "texture": "#controller"},
+				"east": {"uv": [3.25, 11.5, 3.5, 13.5], "texture": "#controller"},
+				"south": {"uv": [0, 7.5, 3, 9.5], "texture": "#controller"},
+				"west": {"uv": [11.5, 3.25, 11.75, 5.25], "texture": "#controller"},
+				"up": {"uv": [10, 11.25, 7, 11], "texture": "#controller"},
+				"down": {"uv": [13, 11, 10, 11.25], "texture": "#controller"}
+			}
+		},
+		{
+			"name": "Screen2",
+			"from": [2, 6, 0],
+			"to": [14, 14, 1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10, 0.5]},
+			"faces": {
+				"north": {"uv": [3, 7.5, 6, 9.5], "texture": "#controller"},
+				"east": {"uv": [3.5, 11.5, 3.75, 13.5], "texture": "#controller"},
+				"south": {"uv": [6, 9, 9, 11], "texture": "#controller"},
+				"west": {"uv": [3.75, 11.5, 4, 13.5], "texture": "#controller"},
+				"up": {"uv": [10, 11.5, 7, 11.25], "texture": "#controller"},
+				"down": {"uv": [13, 11.25, 10, 11.5], "texture": "#controller"}
+			}
+		},
+		{
+			"name": "Screen3",
+			"from": [15, 6, 2],
+			"to": [16, 14, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15.5, 10, 8]},
+			"faces": {
+				"north": {"uv": [4, 11.5, 4.25, 13.5], "texture": "#controller"},
+				"east": {"uv": [9, 9, 12, 11], "texture": "#controller"},
+				"south": {"uv": [4.25, 11.5, 4.5, 13.5], "texture": "#controller"},
+				"west": {"uv": [0, 9.5, 3, 11.5], "texture": "#controller"},
+				"up": {"uv": [0.25, 14.5, 0, 11.5], "texture": "#controller"},
+				"down": {"uv": [11.75, 0, 11.5, 3], "texture": "#controller"}
+			}
+		},
+		{
+			"name": "Screen4",
+			"from": [0, 6, 2],
+			"to": [1, 14, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0.5, 10, 8]},
+			"faces": {
+				"north": {"uv": [4.5, 11.5, 4.75, 13.5], "texture": "#controller"},
+				"east": {"uv": [3, 9.5, 6, 11.5], "texture": "#controller"},
+				"south": {"uv": [4.75, 11.5, 5, 13.5], "texture": "#controller"},
+				"west": {"uv": [10, 7, 13, 9], "texture": "#controller"},
+				"up": {"uv": [0.5, 14.5, 0.25, 11.5], "texture": "#controller"},
+				"down": {"uv": [0.75, 11.5, 0.5, 14.5], "texture": "#controller"}
+			}
+		},
+		{
+			"name": "Red",
+			"from": [9, 15, 9],
+			"to": [13, 16, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 15.5, 11]},
+			"faces": {
+				"north": {"uv": [6, 8.5, 7, 8.75], "texture": "#controller"},
+				"east": {"uv": [6, 8.75, 7, 9], "texture": "#controller"},
+				"south": {"uv": [5, 11.5, 6, 11.75], "texture": "#controller"},
+				"west": {"uv": [11.5, 5.25, 12.5, 5.5], "texture": "#controller"},
+				"up": {"uv": [7, 8.5, 6, 7.5], "texture": "#controller"},
+				"down": {"uv": [11.5, 5, 10.5, 6], "texture": "#controller"}
+			}
+		},
+		{
+			"name": "Blue",
+			"from": [9, 15, 3],
+			"to": [13, 16, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 15.5, 5]},
+			"faces": {
+				"north": {"uv": [11.5, 5.5, 12.5, 5.75], "texture": "#controller"},
+				"east": {"uv": [11.5, 5.75, 12.5, 6], "texture": "#controller"},
+				"south": {"uv": [11.5, 6, 12.5, 6.25], "texture": "#controller"},
+				"west": {"uv": [11.5, 6.25, 12.5, 6.5], "texture": "#controller"},
+				"up": {"uv": [11.5, 7, 10.5, 6], "texture": "#controller"},
+				"down": {"uv": [7, 11, 6, 12], "texture": "#controller"}
+			}
+		},
+		{
+			"name": "Lever",
+			"from": [3, 15, 3],
+			"to": [7, 16, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 15.5, 5]},
+			"faces": {
+				"north": {"uv": [11.5, 6.5, 12.5, 6.75], "texture": "#controller"},
+				"east": {"uv": [0.75, 11.5, 3.25, 11.75], "texture": "#controller"},
+				"south": {"uv": [11.5, 6.75, 12.5, 7], "texture": "#controller"},
+				"west": {"uv": [11.5, 3, 14, 3.25], "texture": "#controller"},
+				"up": {"uv": [11.5, 2.5, 10.5, 0], "texture": "#controller"},
+				"down": {"uv": [11.5, 2.5, 10.5, 5], "texture": "#controller"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -135, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		0,
+		{
+			"name": "Screens",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [1, 2, 3, 4]
+		},
+		{
+			"name": "Buttons",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [5, 6, 7]
+		}
+	]
+}

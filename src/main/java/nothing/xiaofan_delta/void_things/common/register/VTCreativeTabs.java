@@ -23,8 +23,14 @@ public class VTCreativeTabs {
 						output.accept(VTItems.EMPTY_INGOT.get());
 						output.accept(VTItems.EMPTY_NUGGET.get());
 						output.accept(VTItems.EMPTY_SHARD.get());
+						output.accept(VTItems.EMPTY_STICK.get());
+						output.accept(VTItems.EMPTY_PLATE.get());
 						output.accept(VTItems.EMPTY_INGOT_BLOCK_ITEM.get());
 						output.accept(VTItems.VOID_BEDROCK_ITEM.get());
+						output.accept(VTItems.BEDSTONE_ITEM.get());
+						output.accept(VTItems.BEDSTONE_BRICK_ITEM.get());
+						output.accept(VTItems.CONTROLLER_ITEM.get());
+						output.accept(VTItems.SAFETY_GLASS_ITEM.get());
 					})
 					.build());
 

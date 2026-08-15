@@ -1,10 +1,16 @@
 {
 	"itemGroup.void_things.void_tab": "无物",
 
-	"item.void_things.empty_ingot": "无之锭",
-	"item.void_things.empty_nugget": "无之粒",
-	"item.void_things.empty_shard": "无之碎片",
+	"item.void_things.empty_ingot": "空之锭",
+	"item.void_things.empty_nugget": "空之粒",
+	"item.void_things.empty_shard": "空之碎片",
+	"item.void_things.empty_stick": "空之棍",
+	"item.void_things.empty_plate": "空之板",
 
 	"block.void_things.empty_ingot_block": "无之锭块",
-	"block.void_things.void_bedrock": "虚空基岩"
+	"block.void_things.void_bedrock": "虚空基岩",
+	"block.void_things.bedstone": "基石",
+	"block.void_things.bedstone_brick": "基石砖",
+	"block.void_things.controller": "控制器",
+	"block.void_things.safety_glass": "安全玻璃"
 }

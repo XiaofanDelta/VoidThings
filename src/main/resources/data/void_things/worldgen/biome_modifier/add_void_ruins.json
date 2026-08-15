@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:add",
+	"conditions": {
+		"biomes": "#void_things:has_structure/void_ruins",
+		"needs_terrain": true
+	},
+	"structures": "void_things:void_ruins"
+}

@@ -1,16 +1,16 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		"XXX",
-		"XXX",
-		"XXX"
+		"X",
+		"X"
 	],
 	"key": {
 		"X": {
-			"item": "void_things:empty_nugget"
+			"item": "void_things:empty_ingot"
 		}
 	},
 	"result": {
-		"item": "void_things:empty_ingot"
+		"item": "void_things:empty_stick",
+		"count": 2
 	}
 }
