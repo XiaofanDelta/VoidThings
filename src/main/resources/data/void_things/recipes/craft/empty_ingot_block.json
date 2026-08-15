@@ -1,13 +1,16 @@
 {
-	"type": "minecraft:crafting_shapeless",
-	"ingredients": [
-		{
-			"item": "void_things:empty_ingot",
-			"count": 9
-		}
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"XXX",
+		"XXX",
+		"XXX"
 	],
+	"key": {
+		"X": {
+			"item": "void_things:empty_ingot"
+		}
+	},
 	"result": {
-		"item": "void_things:empty_ingot_block",
-		"count": 1
+		"item": "void_things:empty_ingot_block"
 	}
 }

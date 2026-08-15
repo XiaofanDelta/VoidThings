@@ -22,8 +22,9 @@ public class VTCreativeTabs {
 						// 添加物品到标签页
 						output.accept(VTItems.EMPTY_INGOT.get());
 						output.accept(VTItems.EMPTY_NUGGET.get());
+						output.accept(VTItems.EMPTY_SHARD.get());
 						output.accept(VTItems.EMPTY_INGOT_BLOCK_ITEM.get());
-						// 未来添加更多物品时，在这里继续添加
+						output.accept(VTItems.VOID_BEDROCK_ITEM.get());
 					})
 					.build());
 

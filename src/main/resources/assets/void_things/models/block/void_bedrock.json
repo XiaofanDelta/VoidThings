@@ -1,0 +1,107 @@
+{
+	"texture_size": [64, 64],
+	"render_type": "cutout",
+	"textures": {
+		"empty_ore": "void_things:block/ore/void_bedrock/empty_ore",
+		"bedrock": "block/bedrock",
+		"particle": "block/bedrock"
+	},
+	"elements": [
+		{
+			"name": "bedrock",
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#bedrock"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#bedrock"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#bedrock"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#bedrock"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#bedrock"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bedrock"}
+			}
+		},
+		{
+			"name": "ore1",
+			"from": [3, -0.5, 4],
+			"to": [7, 16.5, 8],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [4, -0.5, 5]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 4.25], "texture": "#empty_ore"},
+				"east": {"uv": [1, 0, 2, 4.25], "texture": "#empty_ore"},
+				"south": {"uv": [2, 0, 3, 4.25], "texture": "#empty_ore"},
+				"west": {"uv": [3, 0, 4, 4.25], "texture": "#empty_ore"},
+				"up": {"uv": [6.25, 5.25, 5.25, 4.25], "texture": "#empty_ore"},
+				"down": {"uv": [6.25, 5.25, 5.25, 6.25], "texture": "#empty_ore"}
+			}
+		},
+		{
+			"name": "ore2",
+			"from": [11, -0.5, 4],
+			"to": [14, 16.5, 7],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [12, 12.5, 5]},
+			"faces": {
+				"north": {"uv": [3, 4.25, 3.75, 8.5], "texture": "#empty_ore"},
+				"east": {"uv": [3.75, 4.25, 4.5, 8.5], "texture": "#empty_ore"},
+				"south": {"uv": [4.5, 4.25, 5.25, 8.5], "texture": "#empty_ore"},
+				"west": {"uv": [5, 0, 5.75, 4.25], "texture": "#empty_ore"},
+				"up": {"uv": [6.5, 2.75, 5.75, 2], "texture": "#empty_ore"},
+				"down": {"uv": [6.5, 2.75, 5.75, 3.5], "texture": "#empty_ore"}
+			}
+		},
+		{
+			"name": "ore3",
+			"from": [7, -0.5, 11],
+			"to": [11, 16.5, 15],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, -0.5, 12]},
+			"faces": {
+				"north": {"uv": [4, 0, 5, 4.25], "texture": "#empty_ore"},
+				"east": {"uv": [0, 4.25, 1, 8.5], "texture": "#empty_ore"},
+				"south": {"uv": [1, 4.25, 2, 8.5], "texture": "#empty_ore"},
+				"west": {"uv": [2, 4.25, 3, 8.5], "texture": "#empty_ore"},
+				"up": {"uv": [6.75, 1, 5.75, 0], "texture": "#empty_ore"},
+				"down": {"uv": [6.75, 1, 5.75, 2], "texture": "#empty_ore"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -135, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		0,
+		{
+			"name": "empty_ore",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [1, 2, 3]
+		}
+	]
+}
