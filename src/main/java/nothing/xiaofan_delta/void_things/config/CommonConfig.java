@@ -17,10 +17,6 @@ import java.util.stream.Collectors;
 public class CommonConfig {
 	private static final Logger LOGGER = LogUtils.getLogger();
 
-	// ---------- 世界生成配置 ----------
-	public static ForgeConfigSpec.BooleanValue VOID_BEDROCK_ENABLED;
-	public static ForgeConfigSpec.DoubleValue VOID_BEDROCK_SPAWN_RATE;
-
 	// ---------- 交互物品配置 ----------
 	public static ForgeConfigSpec.ConfigValue<List<? extends String>> VOID_BEDROCK_USABLE_ITEMS;
 	// 运行时解析后的物品集合（方便快速查找）
@@ -30,16 +26,6 @@ public class CommonConfig {
 
 	static {
 		ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
-
-		// ===== 世界生成 =====
-		builder.comment("World Generation Settings").push("worldgen");
-		VOID_BEDROCK_ENABLED = builder
-				.comment("Enable void bedrock generation in the world")
-				.define("voidBedrockEnabled", true);
-		VOID_BEDROCK_SPAWN_RATE = builder
-				.comment("Spawn rate of void bedrock (0.0 = none, 1.0 = all bedrock replaced)")
-				.defineInRange("voidBedrockSpawnRate", 0.3, 0.0, 1.0);
-		builder.pop();
 
 		// ===== 交互物品 =====
 		builder.comment("Items that can interact with void bedrock (left-click)").push("interaction");
@@ -64,8 +50,6 @@ public class CommonConfig {
 				.collect(Collectors.toSet());
 
 		LOGGER.info("【无物】配置已加载！");
-		LOGGER.info("  - 虚空基岩生成: {}", VOID_BEDROCK_ENABLED.get());
-		LOGGER.info("  - 虚空基岩生成概率: {}", VOID_BEDROCK_SPAWN_RATE.get());
 		LOGGER.info("  - 可用交互物品: {}", VOID_BEDROCK_USABLE_ITEMS_SET);
 	}
 }

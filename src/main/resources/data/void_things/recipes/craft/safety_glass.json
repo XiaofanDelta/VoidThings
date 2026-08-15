@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"XXX",
+		"XOX",
+		"XXX"
+	],
+	"key": {
+		"X": {
+			"tag": "forge:glass"
+		},
+		"O": {
+			"item": "void_things:empty_nugget"
+		}
+	},
+	"result": {
+		"item": "void_things:safety_glass",
+		"count": 8
+	}
+}

@@ -12,5 +12,7 @@
 	"block.void_things.bedstone": "基石",
 	"block.void_things.bedstone_brick": "基石砖",
 	"block.void_things.controller": "控制器",
-	"block.void_things.safety_glass": "安全玻璃"
+	"block.void_things.safety_glass": "安全玻璃",
+
+	"jei.void_things.left_click": "左键点击"
 }

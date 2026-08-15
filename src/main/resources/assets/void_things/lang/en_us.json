@@ -12,5 +12,7 @@
 	"block.void_things.bedstone": "Bedstone",
 	"block.void_things.bedstone_brick": "Bedstone Brick",
 	"block.void_things.controller": "Controller",
-	"block.void_things.safety_glass": "Safety Glass"
+	"block.void_things.safety_glass": "Safety Glass",
+
+	"jei.void_things.left_click": "Left Clicking"
 }

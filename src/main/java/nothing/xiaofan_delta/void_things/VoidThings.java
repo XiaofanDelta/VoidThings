@@ -23,7 +23,7 @@ import org.slf4j.Logger;
 public class VoidThings {
 	public static final String MODID = "void_things";
 	public static final String NAME = "Void Things";
-	private static final Logger LOGGER = LogUtils.getLogger();
+	public static final Logger LOGGER = LogUtils.getLogger();
 
 	// 工具方法：获取模组命名空间下的资源路径
 	public static ResourceLocation loadResource(String path) {

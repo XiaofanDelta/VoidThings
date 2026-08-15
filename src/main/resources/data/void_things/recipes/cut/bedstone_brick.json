@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "void_things:bedstone"
+	},
+	"result": {
+		"id": "void_things:bedstone_brick"
+	}
+}
