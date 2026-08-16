@@ -1,0 +1,10 @@
+{
+	"music_disc.man": {
+		"sounds": [
+			{
+				"name": "void_things:records/man",
+				"stream": true
+			}
+		]
+	}
+}

@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import nothing.xiaofan_delta.void_things.VoidThings;
 
 public class VTItems {
-	private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, VoidThings.MODID);
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, VoidThings.MODID);
 
 	// 注册物品
 	public static final RegistryObject<Item> EMPTY_INGOT = ITEMS.register("empty_ingot",
@@ -26,6 +26,9 @@ public class VTItems {
 
 	public static final RegistryObject<Item> EMPTY_PLATE = ITEMS.register("empty_plate",
 			() -> new Item(new Item.Properties().stacksTo(64)));
+
+	public static final RegistryObject<Item> EGG = ITEMS.register("egg",
+			() -> new Item(new Item.Properties().stacksTo(16)));
 
 	// 注册方块对应物品
 	public static final RegistryObject<Item> EMPTY_INGOT_BLOCK_ITEM = ITEMS.register("empty_ingot_block",
@@ -49,6 +52,14 @@ public class VTItems {
 	public static final RegistryObject<Item> SAFETY_GLASS_ITEM =
 			ITEMS.register("safety_glass",
 					() -> new BlockItem(VTBlocks.SAFETY_GLASS.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> BLACK_BLOCK_ITEM =
+			ITEMS.register("black_block",
+					() -> new BlockItem(VTBlocks.BLACK_BLOCK.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> PURPLE_BLOCK_ITEM =
+			ITEMS.register("purple_block",
+					() -> new BlockItem(VTBlocks.PURPLE_BLOCK.get(), new Item.Properties()));
 
 	// 注册方法
 	public static void register(IEventBus bus) {

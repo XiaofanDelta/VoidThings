@@ -6,6 +6,10 @@
 	"item.void_things.empty_shard": "空之碎片",
 	"item.void_things.empty_stick": "空之棍",
 	"item.void_things.empty_plate": "空之板",
+	"item.void_things.egg": "蛋",
+	"item.void_things.man_music_disc": "音乐唱片",
+
+	"item.void_things.man_music_disc.desc": "托比福克斯，？？？ - ？？",
 
 	"block.void_things.empty_ingot_block": "无之锭块",
 	"block.void_things.void_bedrock": "虚空基岩",

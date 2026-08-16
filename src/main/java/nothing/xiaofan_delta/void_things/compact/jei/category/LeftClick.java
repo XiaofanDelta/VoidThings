@@ -24,7 +24,7 @@ public class LeftClick implements IRecipeCategory<LeftClickRecipe> {
 			RecipeType.create(VoidThings.MODID, "left_click", LeftClickRecipe.class);
 
 	private static final ResourceLocation GUI_TEXTURE =
-			VoidThings.loadResource("textures/gui/block_left_click.png");
+			VoidThings.loadResource("textures/gui/test.png");
 
 	// 背景尺寸
 	private static final int GUI_WIDTH = 128;

@@ -55,6 +55,22 @@ public class VTBlocks {
 					.noLootTable()
 			));
 
+	public static final RegistryObject<Block> BLACK_BLOCK = BLOCKS.register("black_block",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_BLACK)
+					.strength(3.0F, 300.0F)
+					.sound(SoundType.STONE)
+					.requiresCorrectToolForDrops()
+			));
+
+	public static final RegistryObject<Block> PURPLE_BLOCK = BLOCKS.register("purple_block",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_PURPLE)
+					.strength(3.0F, 300.0F)
+					.sound(SoundType.STONE)
+					.requiresCorrectToolForDrops()
+			));
+
 	public static final RegistryObject<Block> VOID_BEDROCK =
 			BLOCKS.register("void_bedrock", VoidBedrockBlock::new);
 

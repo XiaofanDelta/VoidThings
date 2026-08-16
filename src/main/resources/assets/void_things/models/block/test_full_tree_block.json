@@ -1,0 +1,102 @@
+{
+	"format_version": "1.9.0",
+	"textures": {
+		"root": "void_things:block/deco/tree/root",
+		"particle": "void_things:block/deco/tree/side",
+		"side_full": "void_things:block/deco/tree/side",
+		"top": "void_things:block/deco/tree/top",
+		"south": "void_things:block/deco/tree/upper/south",
+		"bottom": "void_things:block/deco/tree/upper/bottom",
+		"north": "void_things:block/deco/tree/upper/north",
+		"side": "void_things:block/deco/tree/upper/side"
+	},
+	"elements": [
+		{
+			"name": "Main",
+			"from": [0, 4, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10.5, 8]},
+			"faces": {
+				"north": {"uv": [5.5, 8, 9.5, 11], "texture": "#root"},
+				"east": {"uv": [9.5, 0, 13.5, 3], "texture": "#root"},
+				"south": {"uv": [9.5, 3, 13.5, 6], "texture": "#root"},
+				"west": {"uv": [9.5, 6, 13.5, 9], "texture": "#root"},
+				"up": {"uv": [9.5, 4, 5.5, 0], "texture": "#root"},
+				"down": {"uv": [9.5, 8, 5.5, 4], "texture": "#root"}
+			}
+		},
+		{
+			"name": "Root",
+			"from": [-3, 0, -3],
+			"to": [19, 4, 19],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [0, 13, 5.5, 14], "texture": "#root"},
+				"east": {"uv": [0, 14, 5.5, 15], "texture": "#root"},
+				"south": {"uv": [0, 11, 5.5, 12], "texture": "#root"},
+				"west": {"uv": [0, 12, 5.5, 13], "texture": "#root"},
+				"up": {"uv": [5.5, 5.5, 0, 0], "texture": "#root"},
+				"down": {"uv": [5.5, 5.5, 0, 11], "texture": "#root"}
+			}
+		},
+		{
+			"name": "Full Tree Block",
+			"from": [0, 16, 16],
+			"to": [16, 32, 32],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 24, 24]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#side_full"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#side_full"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#side_full"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#side_full"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#top"}
+			}
+		},
+		{
+			"name": "Half Tree Block",
+			"from": [0, 8, 16],
+			"to": [16, 16, 32],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 12, 24]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#north"},
+				"east": {"uv": [16, 0, 0, 8], "texture": "#side"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#south"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#bottom"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -135, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}

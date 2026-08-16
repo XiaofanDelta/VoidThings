@@ -17,6 +17,7 @@ import nothing.xiaofan_delta.void_things.config.CommonConfig;
 import nothing.xiaofan_delta.void_things.common.register.VTBlocks;
 import nothing.xiaofan_delta.void_things.common.register.VTCreativeTabs;
 import nothing.xiaofan_delta.void_things.common.register.VTItems;
+import nothing.xiaofan_delta.void_things.common.register.VTMusicDisc;
 import org.slf4j.Logger;
 
 @Mod(VoidThings.MODID)
@@ -47,6 +48,7 @@ public class VoidThings {
 		VTBlocks.register(modEventBus);
 		VTItems.register(modEventBus);
 		VTCreativeTabs.register(modEventBus);
+		VTMusicDisc.SOUND_EVENTS.register(modEventBus);
 
 		// -------- 注册事件监听 --------
 		modEventBus.addListener(this::commonSetup);
@@ -69,8 +71,6 @@ public class VoidThings {
 
 	// -------- 将物品添加到创造模式标签页 --------
 	private void addCreative(BuildCreativeModeTabContentsEvent event) {
-		// 如果你的模组有创造模式标签页，这里可以添加额外的物品到原版标签页
-		// 例如：将 void_ingot 添加到“原材料”标签页
 		// if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 		//	 event.accept(VTItems.VOID_INGOT.get());
 		// }

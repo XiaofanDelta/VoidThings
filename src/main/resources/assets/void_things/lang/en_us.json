@@ -6,6 +6,10 @@
 	"item.void_things.empty_shard": "Empty Shard",
 	"item.void_things.empty_stick": "Empty Stick",
 	"item.void_things.empty_plate": "Empty Plate",
+	"item.void_things.egg": "Egg",
+	"item.void_things.man_music_disc": "Music Disc",
+
+	"item.void_things.man_music_disc.desc": "Toby Fox, ?????? - ???",
 
 	"block.void_things.empty_ingot_block": "Empty Ingot Block",
 	"block.void_things.void_bedrock": "Void Bedrock",
