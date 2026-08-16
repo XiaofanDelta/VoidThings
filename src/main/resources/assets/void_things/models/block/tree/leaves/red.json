@@ -1,5 +1,5 @@
 {
-	"parent": "void_things:block/tree/leave/base",
+	"parent": "void_things:block/tree/leaves/base",
 	"textures": {
 		"layer": "void_things:block/deco/tree/leaves/red"
 	}

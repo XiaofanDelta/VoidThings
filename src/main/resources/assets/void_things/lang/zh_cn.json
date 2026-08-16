@@ -17,6 +17,16 @@
 	"block.void_things.bedstone_brick": "基石砖",
 	"block.void_things.controller": "控制器",
 	"block.void_things.safety_glass": "安全玻璃",
+	"block.void_things.black_block": "黑色方块",
+	"block.void_things.purple_block": "紫色方块",
+	"block.void_things.tree_root": "【树】根",
+	"block.void_things.tree_branch": "【树】枝",
+	"block.void_things.tree_truck": "【树】干",
+	"block.void_things.tree_truck_top": "【树】干 (顶端)",
+	"block.void_things.tree_truck_half": "【树】干 (底端)",
+	"block.void_things.tree_leaves_red": "【树】叶 (红色)",
+	"block.void_things.tree_leaves_purple": "【树】叶 (紫色)",
+	"block.void_things.tree_leaves_dark_purple": "【树】叶 (暗紫色)",
 
 	"jei.void_things.left_click": "左键点击"
 }

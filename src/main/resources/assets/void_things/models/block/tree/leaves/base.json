@@ -1,5 +1,8 @@
 {
 	"render_type": "cutout",
+	"textures": {
+		"particle": "#layer"
+	},
 	"elements": [
 		{
 			"name": "Main",

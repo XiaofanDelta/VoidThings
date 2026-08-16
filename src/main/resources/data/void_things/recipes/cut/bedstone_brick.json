@@ -3,5 +3,6 @@
 	"ingredient": {
 		"item": "void_things:bedstone"
 	},
-	"result": "void_things:bedstone_brick"
+	"result": "void_things:bedstone_brick",
+	"count": 1
 }

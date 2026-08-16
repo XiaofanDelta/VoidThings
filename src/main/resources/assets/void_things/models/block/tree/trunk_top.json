@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:block/cube_bottom_top",
+	"textures": {
+		"bottom": "void_things:block/deco/tree/top",
+		"side": "void_things:block/deco/tree/top_side",
+		"top": "void_things:block/deco/tree/top_top"
+	}
+}

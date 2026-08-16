@@ -61,6 +61,39 @@ public class VTItems {
 			ITEMS.register("purple_block",
 					() -> new BlockItem(VTBlocks.PURPLE_BLOCK.get(), new Item.Properties()));
 
+	// 树后面有一个男人
+	public static final RegistryObject<Item> TREE_TRUNK_ITEM =
+			ITEMS.register("tree_trunk",
+					() -> new BlockItem(VTBlocks.TREE_TRUNK.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> TREE_TRUNK_TOP_ITEM =
+			ITEMS.register("tree_trunk_top",
+					() -> new BlockItem(VTBlocks.TREE_TRUNK_TOP.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> TREE_TRUNK_HALF_ITEM =
+			ITEMS.register("tree_trunk_half",
+					() -> new BlockItem(VTBlocks.TREE_TRUNK_HALF.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> TREE_BRANCH_ITEM =
+			ITEMS.register("tree_branch",
+					() -> new BlockItem(VTBlocks.TREE_BRANCH.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> TREE_ROOT_ITEM =
+			ITEMS.register("tree_root",
+					() -> new BlockItem(VTBlocks.TREE_ROOT.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> TREE_LEAVES_RED_ITEM =
+			ITEMS.register("tree_leaves_red",
+					() -> new BlockItem(VTBlocks.TREE_LEAVES_RED.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> TREE_LEAVES_PURPLE_ITEM =
+			ITEMS.register("tree_leaves_purple",
+					() -> new BlockItem(VTBlocks.TREE_LEAVES_PURPLE.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> TREE_LEAVES_DARK_PURPLE_ITEM =
+			ITEMS.register("tree_leaves_dark_purple",
+					() -> new BlockItem(VTBlocks.TREE_LEAVES_DARK_PURPLE.get(), new Item.Properties()));
+
 	// 注册方法
 	public static void register(IEventBus bus) {
 		ITEMS.register(bus);

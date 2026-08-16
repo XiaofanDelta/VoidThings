@@ -17,6 +17,16 @@
 	"block.void_things.bedstone_brick": "Bedstone Brick",
 	"block.void_things.controller": "Controller",
 	"block.void_things.safety_glass": "Safety Glass",
+	"block.void_things.black_block": "Black Block",
+	"block.void_things.purple_block": "Purple Block",
+	"block.void_things.tree_root": "TREE Root",
+	"block.void_things.tree_branch": "TREE Branch",
+	"block.void_things.tree_truck": "TREE Truck",
+	"block.void_things.tree_truck_top": "TREE Truck (Top)",
+	"block.void_things.tree_truck_half": "TREE Truck (Bottom)",
+	"block.void_things.tree_leaves_red": "TREE Leaves (Red)",
+	"block.void_things.tree_leaves_purple": "TREE Leaves (Purple)",
+	"block.void_things.tree_leaves_dark_purple": "TREE Leaves (Dark Purple)",
 
 	"jei.void_things.left_click": "Left Clicking"
 }

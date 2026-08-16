@@ -9,6 +9,8 @@
  - 【虚空遗迹】结构
  - 【左键点击】JEI 配方
  - 部分物品配方
+ - 【？？】唱片
+ - \* 他在树后面
 
 # Void Things Mod Update Logs
 ## 0.0.1
@@ -18,6 +20,8 @@
 ## 0.0.2
  - Renamed Mod Name to *Void Things*
  - Added some building blocks and materials
- - *Void Ruins* structure
+ - *Void Ruins* Structure
  - *Left Click* JEI recipe
  - Recipes of some items
+ - *???* Music Disc
+ - \* He is behind the tree

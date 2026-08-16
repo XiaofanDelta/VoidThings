@@ -74,6 +74,63 @@ public class VTBlocks {
 	public static final RegistryObject<Block> VOID_BEDROCK =
 			BLOCKS.register("void_bedrock", VoidBedrockBlock::new);
 
+	// 他在树后面
+	public static final RegistryObject<Block> TREE_ROOT = BLOCKS.register("tree_root",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_PURPLE)
+					.strength(1.0F, 1.0F)
+					.sound(SoundType.WOOD)
+			));
+
+	public static final RegistryObject<Block> TREE_TRUNK = BLOCKS.register("tree_trunk",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_PURPLE)
+					.strength(1.0F, 1.0F)
+					.sound(SoundType.WOOD)
+			));
+
+	public static final RegistryObject<Block> TREE_TRUNK_HALF = BLOCKS.register("tree_trunk_half",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_PURPLE)
+					.strength(1.0F, 1.0F)
+					.sound(SoundType.WOOD)
+			));
+
+	public static final RegistryObject<Block> TREE_TRUNK_TOP = BLOCKS.register("tree_trunk_top",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_PURPLE)
+					.strength(1.0F, 1.0F)
+					.sound(SoundType.WOOD)
+			));
+
+	public static final RegistryObject<Block> TREE_BRANCH = BLOCKS.register("tree_branch",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_PURPLE)
+					.strength(1.0F, 1.0F)
+					.sound(SoundType.WOOD)
+			));
+
+	public static final RegistryObject<Block> TREE_LEAVES_PURPLE = BLOCKS.register("tree_leaves_purple",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_PURPLE)
+					.strength(1.0F, 1.0F)
+					.sound(SoundType.AZALEA_LEAVES)
+			));
+
+	public static final RegistryObject<Block> TREE_LEAVES_RED = BLOCKS.register("tree_leaves_red",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_RED)
+					.strength(1.0F, 1.0F)
+					.sound(SoundType.AZALEA_LEAVES)
+			));
+
+	public static final RegistryObject<Block> TREE_LEAVES_DARK_PURPLE = BLOCKS.register("tree_leaves_dark_purple",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_RED)
+					.strength(1.0F, 1.0F)
+					.sound(SoundType.AZALEA_LEAVES)
+			));
+
 	// 注册方法
 	public static void register(IEventBus bus) {
 		BLOCKS.register(bus);

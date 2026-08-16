@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+		"end": "void_things:block/deco/tree/top",
+		"side": "void_things:block/deco/tree/side"
+	}
+}

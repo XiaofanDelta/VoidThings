@@ -35,6 +35,14 @@ public class VTCreativeTabs {
 						output.accept(VTItems.SAFETY_GLASS_ITEM.get());
 						output.accept(VTItems.BLACK_BLOCK_ITEM.get());
 						output.accept(VTItems.PURPLE_BLOCK_ITEM.get());
+						output.accept(VTItems.TREE_ROOT_ITEM.get());
+						output.accept(VTItems.TREE_BRANCH_ITEM.get());
+						output.accept(VTItems.TREE_TRUNK_ITEM.get());
+						output.accept(VTItems.TREE_TRUNK_TOP_ITEM.get());
+						output.accept(VTItems.TREE_TRUNK_HALF_ITEM.get());
+						output.accept(VTItems.TREE_LEAVES_RED_ITEM.get());
+						output.accept(VTItems.TREE_LEAVES_PURPLE_ITEM.get());
+						output.accept(VTItems.TREE_LEAVES_DARK_PURPLE_ITEM.get());
 					})
 					.build());
 
