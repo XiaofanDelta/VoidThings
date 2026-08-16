@@ -1,5 +1,4 @@
 {
-	"format_version": "1.9.0",
 	"texture_size": [64, 64],
 	"textures": {
 		"main": "void_things:block/deco/tree/root",
