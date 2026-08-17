@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"XX",
+		"XX"
+	],
+	"key": {
+		"X": {
+			"tag": "forge:dyes/purple"
+		}
+	},
+	"result": {
+		"item": "void_things:purple_block",
+		"count": 4
+	}
+}

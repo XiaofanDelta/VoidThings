@@ -24,11 +24,11 @@ public class LeftClick implements IRecipeCategory<LeftClickRecipe> {
 			RecipeType.create(VoidThings.MODID, "left_click", LeftClickRecipe.class);
 
 	private static final ResourceLocation GUI_TEXTURE =
-			VoidThings.loadResource("textures/gui/test.png");
+			VoidThings.loadResource("textures/gui/block_left_click.png");
 
 	// 背景尺寸
 	private static final int GUI_WIDTH = 128;
-	private static final int GUI_HEIGHT = 128;
+	private static final int GUI_HEIGHT = 101;
 
 	private final IDrawable background;
 	private final IDrawable icon;
@@ -55,6 +55,7 @@ public class LeftClick implements IRecipeCategory<LeftClickRecipe> {
 		return title;
 	}
 
+	@SuppressWarnings({"removal"})
 	@Override
 	public IDrawable getBackground() {
 		return background;
@@ -67,20 +68,20 @@ public class LeftClick implements IRecipeCategory<LeftClickRecipe> {
 
 	@Override
 	public void setRecipe(IRecipeLayoutBuilder builder, LeftClickRecipe recipe, IFocusGroup focuses) {
-		// 工具槽 (47, 22) → 15×15
-		builder.addSlot(RecipeIngredientRole.CATALYST, 47, 22)
+		// 工具槽 (47, 11)
+		builder.addSlot(RecipeIngredientRole.CATALYST, 47, 11)
 				.addItemStack(recipe.getTool());
 
-		// 方块输入槽 (15, 56) → 15×15
-		builder.addSlot(RecipeIngredientRole.INPUT, 15, 56)
+		// 方块输入槽 (15, 45)
+		builder.addSlot(RecipeIngredientRole.INPUT, 15, 45)
 				.addItemStack(recipe.getInputBlock());
 
-		// 方块输出槽 (97, 56) → 15×15
-		builder.addSlot(RecipeIngredientRole.OUTPUT, 97, 56)
+		// 方块输出槽 (97, 45)
+		builder.addSlot(RecipeIngredientRole.OUTPUT, 97, 45)
 				.addItemStack(recipe.getOutputBlock());
 
-		// 物品输出槽 (56, 85) → 15×15
-		builder.addSlot(RecipeIngredientRole.OUTPUT, 56, 85)
+		// 物品输出槽 (56, 74)
+		builder.addSlot(RecipeIngredientRole.OUTPUT, 56, 74)
 				.addItemStack(recipe.getResultItem());
 	}
 

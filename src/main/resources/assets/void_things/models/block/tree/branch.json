@@ -1,5 +1,4 @@
 {
-	"format_version": "1.9.0",
 	"texture_size": [32, 32],
 	"textures": {
 		"particle": "void_things:block/deco/tree/branch",

@@ -1,6 +1,5 @@
 {
 	"itemGroup.void_things.void_tab": "无物",
-
 	"item.void_things.empty_ingot": "空之锭",
 	"item.void_things.empty_nugget": "空之粒",
 	"item.void_things.empty_shard": "空之碎片",
@@ -9,7 +8,7 @@
 	"item.void_things.egg": "蛋",
 	"item.void_things.man_music_disc": "音乐唱片",
 
-	"item.void_things.man_music_disc.desc": "托比福克斯，？？？ - ？？",
+	"item.void_things.man_music_disc.desc": "托比福克斯，§k???§r - §k??§r",
 
 	"block.void_things.empty_ingot_block": "无之锭块",
 	"block.void_things.void_bedrock": "虚空基岩",
@@ -17,16 +16,17 @@
 	"block.void_things.bedstone_brick": "基石砖",
 	"block.void_things.controller": "控制器",
 	"block.void_things.safety_glass": "安全玻璃",
-	"block.void_things.black_block": "黑色方块",
-	"block.void_things.purple_block": "紫色方块",
-	"block.void_things.tree_root": "【树】根",
-	"block.void_things.tree_branch": "【树】枝",
-	"block.void_things.tree_truck": "【树】干",
-	"block.void_things.tree_truck_top": "【树】干 (顶端)",
-	"block.void_things.tree_truck_half": "【树】干 (底端)",
-	"block.void_things.tree_leaves_red": "【树】叶 (红色)",
-	"block.void_things.tree_leaves_purple": "【树】叶 (紫色)",
-	"block.void_things.tree_leaves_dark_purple": "【树】叶 (暗紫色)",
+	"block.void_things.black_block": "§0黑色方块§r",
+	"block.void_things.purple_block": "§5紫色方块§r",
+	"block.void_things.tree_root": "§l树§r根",
+	"block.void_things.tree_branch": "§l树§r枝",
+	"block.void_things.tree_trunk": "§l树§r干",
+	"block.void_things.tree_trunk_top": "§l树§r干 (顶端)",
+	"block.void_things.tree_trunk_half": "§l树§r干 (底端)",
+	"block.void_things.tree_leaves_red": "§l树§r叶 (§4红色§r)",
+	"block.void_things.tree_leaves_purple": "§l树§r叶 (§d紫色§r)",
+	"block.void_things.tree_leaves_dark_purple": "§l树§r叶 (§5暗紫色§r)",
+	"block.void_things.tree_planks": "§l树§r板材",
 
 	"jei.void_things.left_click": "左键点击"
 }

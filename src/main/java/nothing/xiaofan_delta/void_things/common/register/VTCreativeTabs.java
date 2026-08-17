@@ -43,6 +43,7 @@ public class VTCreativeTabs {
 						output.accept(VTItems.TREE_LEAVES_RED_ITEM.get());
 						output.accept(VTItems.TREE_LEAVES_PURPLE_ITEM.get());
 						output.accept(VTItems.TREE_LEAVES_DARK_PURPLE_ITEM.get());
+						output.accept(VTItems.TREE_PLANKS_ITEM.get());
 					})
 					.build());
 

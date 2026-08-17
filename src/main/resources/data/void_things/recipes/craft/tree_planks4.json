@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "void_things:tree_trunk"
+		}
+	],
+	"result": {
+		"item": "void_things:tree_planks",
+		"count": 4
+	}
+}

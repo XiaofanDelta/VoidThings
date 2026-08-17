@@ -122,6 +122,7 @@ public class VTBlocks {
 					.mapColor(MapColor.COLOR_RED)
 					.strength(1.0F, 1.0F)
 					.sound(SoundType.AZALEA_LEAVES)
+
 			));
 
 	public static final RegistryObject<Block> TREE_LEAVES_DARK_PURPLE = BLOCKS.register("tree_leaves_dark_purple",
@@ -129,6 +130,13 @@ public class VTBlocks {
 					.mapColor(MapColor.COLOR_RED)
 					.strength(1.0F, 1.0F)
 					.sound(SoundType.AZALEA_LEAVES)
+			));
+
+	public static final RegistryObject<Block> TREE_PLANKS = BLOCKS.register("tree_planks",
+			() -> new Block(BlockBehaviour.Properties.of()
+					.mapColor(MapColor.COLOR_PURPLE)
+					.strength(2.0F, 20.0F)
+					.sound(SoundType.WOOD)
 			));
 
 	// 注册方法

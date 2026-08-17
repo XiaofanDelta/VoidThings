@@ -94,6 +94,10 @@ public class VTItems {
 			ITEMS.register("tree_leaves_dark_purple",
 					() -> new BlockItem(VTBlocks.TREE_LEAVES_DARK_PURPLE.get(), new Item.Properties()));
 
+	public static final RegistryObject<Item> TREE_PLANKS_ITEM =
+			ITEMS.register("tree_planks",
+					() -> new BlockItem(VTBlocks.TREE_PLANKS.get(), new Item.Properties()));
+
 	// 注册方法
 	public static void register(IEventBus bus) {
 		ITEMS.register(bus);
