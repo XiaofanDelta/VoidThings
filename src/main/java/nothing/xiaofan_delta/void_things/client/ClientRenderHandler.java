@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraft.client.renderer.LevelRenderer;
+import net.minecraft.world.level.block.Block;
 
 import nothing.xiaofan_delta.void_things.VoidThings;
 import nothing.xiaofan_delta.void_things.common.register.VTBlocks;

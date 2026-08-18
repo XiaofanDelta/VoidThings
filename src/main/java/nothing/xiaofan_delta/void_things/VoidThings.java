@@ -19,6 +19,7 @@ import nothing.xiaofan_delta.void_things.common.register.VTCreativeTabs;
 import nothing.xiaofan_delta.void_things.common.register.VTItems;
 import nothing.xiaofan_delta.void_things.common.register.VTMusicDisc;
 import org.slf4j.Logger;
+import dev.celestiacraft.libs.NebulaLibs;
 
 @Mod(VoidThings.MODID)
 public class VoidThings {
