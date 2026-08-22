@@ -11,6 +11,7 @@
  - 部分物品配方
  - 【？？】唱片
  - \* 他在树后面
+ - 添加了`锻造模版(空之转换)`
 
 # Void Things Mod Update Logs
 ## 0.0.1
@@ -25,3 +26,4 @@
  - Recipes of some items
  - *???* Music Disc
  - \* He is behind the tree
+ - Added `Smithing Template(Empty Conversion)`
