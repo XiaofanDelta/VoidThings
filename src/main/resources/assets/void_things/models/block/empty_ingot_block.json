@@ -1,9 +1,9 @@
 {
 	"parent": "minecraft:block/cube_bottom_top",
-	"render_type": "cutout",
 	"textures": {
 		"bottom": "void_things:block/material/empty_ingot_blcok/bottom",
 		"top": "void_things:block/material/empty_ingot_blcok/top",
 		"side": "void_things:block/material/empty_ingot_blcok/side"
-	}
+	},
+	"render_type": "cutout"
 }

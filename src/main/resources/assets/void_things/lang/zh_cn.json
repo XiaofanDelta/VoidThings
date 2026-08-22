@@ -5,10 +5,17 @@
 	"item.void_things.empty_shard": "空之碎片",
 	"item.void_things.empty_stick": "空之棍",
 	"item.void_things.empty_plate": "空之板",
+	"item.void_things.bedrock_shard": "基岩碎片",
 	"item.void_things.egg": "蛋",
-	"item.void_things.man_music_disc": "音乐唱片",
 
+	"item.void_things.man_music_disc": "音乐唱片",
 	"item.void_things.man_music_disc.desc": "托比福克斯，§k???§r - §k??§r",
+
+	"item.void_things.empty_smithing_template": "空之转换",
+	"item.void_things.empty_smithing_template.applies_to": "某物",
+	"item.void_things.empty_smithing_template.addition_slot": "放入某物",
+	"item.void_things.empty_smithing_template.ingredients": "空之碎片",
+	"item.void_things.empty_smithing_template.base_slot": "放入空之碎片",
 
 	"block.void_things.empty_ingot_block": "无之锭块",
 	"block.void_things.void_bedrock": "虚空基岩",

@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		"void_things:tree_trunk",
+		"void_things:tree_trunk_top",
+		"void_things:tree_root"
+	]
+}

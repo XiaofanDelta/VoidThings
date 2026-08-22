@@ -1,7 +1,20 @@
 {
 	"variants": {
-		"": {
-			"model": "void_things:block/tree/trunk_half"
+		"facing=north": {
+			"model": "void_things:block/tree/trunk_half",
+			"y": 0
+		},
+		"facing=east": {
+			"model": "void_things:block/tree/trunk_half",
+			"y": 90
+		},
+		"facing=south": {
+			"model": "void_things:block/tree/trunk_half",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "void_things:block/tree/trunk_half",
+			"y": 270
 		}
 	}
 }

@@ -1,0 +1,7 @@
+{
+	"values": [
+		"#minecraft:trim_templates",
+		"minecraft:netherite_upgrade_smithing_template",
+		"void_things:empty_smithing_template"
+	]
+}

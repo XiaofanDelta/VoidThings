@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		"void_things:tree_leaves_red",
+		"void_things:tree_leaves_purple",
+		"void_things:tree_leaves_dark_purple"
+	]
+}

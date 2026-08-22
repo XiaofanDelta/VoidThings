@@ -1,8 +1,11 @@
 {
-	"replace": false,
 	"values": [
 		"void_things:empty_ingot",
 		"void_things:empty_nugget",
-		"void_things:empty_ingot_block"
+		"void_things:empty_ingot_block",
+		"void_things:empty_shard",
+		"void_things:empty_smithing_template",
+		"void_things:empty_stick",
+		"void_things:empty_plate"
 	]
 }

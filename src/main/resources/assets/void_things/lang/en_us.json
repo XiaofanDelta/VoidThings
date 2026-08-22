@@ -6,10 +6,17 @@
 	"item.void_things.empty_shard": "Empty Shard",
 	"item.void_things.empty_stick": "Empty Stick",
 	"item.void_things.empty_plate": "Empty Plate",
+	"item.void_things.bedrock_shard": "Bedrock Shard",
 	"item.void_things.egg": "Egg",
-	"item.void_things.man_music_disc": "Music Disc",
 
+	"item.void_things.man_music_disc": "Music Disc",
 	"item.void_things.man_music_disc.desc": "Toby Fox, §k??????§r - §k???§r",
+
+	"item.void_things.empty_smithing_template": "Empty Conversion",
+	"item.void_things.empty_smithing_template.applies_to": "Something",
+	"item.void_things.empty_smithing_template.addition_slot": "Add something",
+	"item.void_things.empty_smithing_template.ingredients": "Empty Shard",
+	"item.void_things.empty_smithing_template.base_slot": "Add empty shard",
 
 	"block.void_things.empty_ingot_block": "Empty Ingot Block",
 	"block.void_things.void_bedrock": "Void Bedrock",

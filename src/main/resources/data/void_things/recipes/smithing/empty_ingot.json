@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:smithing_transform",
+	"template": {
+		"item": "void_things:empty_smithing_template"
+	},
+	"base": {
+		"item": "void_things:empty_plate"
+	},
+	"addition": {
+		"tag": "forge:ingots"
+	},
+	"result": {
+		"item": "void_things:empty_ingot",
+		"count": 3
+	}
+}

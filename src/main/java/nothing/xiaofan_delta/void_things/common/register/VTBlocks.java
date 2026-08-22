@@ -1,7 +1,6 @@
 package nothing.xiaofan_delta.void_things.common.register;
 
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -11,6 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import nothing.xiaofan_delta.void_things.VoidThings;
 import nothing.xiaofan_delta.void_things.common.register.block.VoidBedrockBlock;
+import nothing.xiaofan_delta.void_things.common.block.HorizontalBlock;
 
 public class VTBlocks {
 	private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, VoidThings.MODID);
@@ -53,6 +53,7 @@ public class VTBlocks {
 					.strength(1.0F, 100.0F)
 					.sound(SoundType.GLASS)
 					.noLootTable()
+					.noOcclusion()
 			));
 
 	public static final RegistryObject<Block> BLACK_BLOCK = BLOCKS.register("black_block",
@@ -76,7 +77,7 @@ public class VTBlocks {
 
 	// 他在树后面
 	public static final RegistryObject<Block> TREE_ROOT = BLOCKS.register("tree_root",
-			() -> new Block(BlockBehaviour.Properties.of()
+			() -> new HorizontalBlock(BlockBehaviour.Properties.of()
 					.mapColor(MapColor.COLOR_PURPLE)
 					.strength(1.0F, 1.0F)
 					.sound(SoundType.WOOD)
@@ -90,7 +91,7 @@ public class VTBlocks {
 			));
 
 	public static final RegistryObject<Block> TREE_TRUNK_HALF = BLOCKS.register("tree_trunk_half",
-			() -> new Block(BlockBehaviour.Properties.of()
+			() -> new HorizontalBlock(BlockBehaviour.Properties.of()
 					.mapColor(MapColor.COLOR_PURPLE)
 					.strength(1.0F, 1.0F)
 					.sound(SoundType.WOOD)
@@ -104,7 +105,7 @@ public class VTBlocks {
 			));
 
 	public static final RegistryObject<Block> TREE_BRANCH = BLOCKS.register("tree_branch",
-			() -> new Block(BlockBehaviour.Properties.of()
+			() -> new HorizontalBlock(BlockBehaviour.Properties.of()
 					.mapColor(MapColor.COLOR_PURPLE)
 					.strength(1.0F, 1.0F)
 					.sound(SoundType.WOOD)

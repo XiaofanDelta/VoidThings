@@ -11,20 +11,22 @@ import net.minecraft.world.level.block.Block;
 
 import nothing.xiaofan_delta.void_things.VoidThings;
 import nothing.xiaofan_delta.void_things.common.register.VTBlocks;
+import org.jetbrains.annotations.NotNull;
 
 @Mod.EventBusSubscriber(modid = VoidThings.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientRenderHandler {
 
 	@SubscribeEvent
-	public static void onClientSetup(FMLClientSetupEvent event) {
+	public static void onClientSetup(@NotNull FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 
 			// 使用 translucent（半透明混合）
-			ItemBlockRenderTypes.setRenderLayer(VTBlocks.SAFETY_GLASS.get(), RenderType.translucent());
+			// ItemBlockRenderTypes.setRenderLayer(VTBlocks.SAFETY_GLASS.get(), RenderType.translucent());
 
 			// 使用 cutout
-			ItemBlockRenderTypes.setRenderLayer(VTBlocks.CONTROLLER.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(VTBlocks.EMPTY_INGOT_BLOCK.get(), RenderType.cutout());
+			// ItemBlockRenderTypes.setRenderLayer(VTBlocks.CONTROLLER.get(), RenderType.cutout());
+			// ItemBlockRenderTypes.setRenderLayer(VTBlocks.EMPTY_INGOT_BLOCK.get(), RenderType.cutout());
+			ItemBlockRenderTypes.setRenderLayer(VTBlocks.EMPTY_INGOT_BLOCK.get(), RenderType.cutoutMipped());
 
 		});
 	}

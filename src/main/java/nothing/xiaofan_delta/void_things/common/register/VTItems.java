@@ -1,12 +1,18 @@
 package nothing.xiaofan_delta.void_things.common.register;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import nothing.xiaofan_delta.void_things.VoidThings;
+import nothing.xiaofan_delta.void_things.api.register.item.VTSmithingTemplateHelper;
+
+import java.util.ArrayList;
 
 public class VTItems {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, VoidThings.MODID);
@@ -29,6 +35,18 @@ public class VTItems {
 
 	public static final RegistryObject<Item> EGG = ITEMS.register("egg",
 			() -> new Item(new Item.Properties().stacksTo(16)));
+
+	public static final RegistryObject<Item> BEDROCK_SHARD = ITEMS.register("bedrock_shard",
+			() -> new Item(new Item.Properties().stacksTo(8)));
+
+	// 锻造模版
+	public static final RegistryObject<Item> EMPTY_SMITHING_TEMPLATE =
+			ITEMS.register("empty_smithing_template",
+					() -> VTSmithingTemplateHelper.createSimple(
+							"empty",
+							VoidThings.loadResource("item/material/empty_shard"),
+							VoidThings.loadResource("item/material/empty_ingot")
+							));
 
 	// 注册方块对应物品
 	public static final RegistryObject<Item> EMPTY_INGOT_BLOCK_ITEM = ITEMS.register("empty_ingot_block",

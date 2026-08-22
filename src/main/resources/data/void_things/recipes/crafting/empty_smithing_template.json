@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"XOX",
+		"X X",
+		"XXX"
+	],
+	"key": {
+		"X": {
+			"item": "void_things:empty_nugget"
+		},
+		"O": {
+			"tag": "void_things:smithing_templates"
+		}
+	},
+	"result": {
+		"item": "void_things:empty_smithing_template",
+		"count": 2
+	}
+}

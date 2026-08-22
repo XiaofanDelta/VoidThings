@@ -20,11 +20,13 @@ public class VTCreativeTabs {
 					.icon(() -> new ItemStack(VTItems.EMPTY_INGOT.get()))
 					.displayItems((parameters, output) -> {
 						// 添加物品到标签页
+						output.accept(VTItems.BEDROCK_SHARD.get());
 						output.accept(VTItems.EMPTY_INGOT.get());
 						output.accept(VTItems.EMPTY_NUGGET.get());
 						output.accept(VTItems.EMPTY_SHARD.get());
 						output.accept(VTItems.EMPTY_STICK.get());
 						output.accept(VTItems.EMPTY_PLATE.get());
+						output.accept(VTItems.EMPTY_SMITHING_TEMPLATE.get());
 						output.accept(VTItems.EGG.get());
 						output.accept(VTMusicDisc.MAN_MUSIC_DISC.get());
 						output.accept(VTItems.EMPTY_INGOT_BLOCK_ITEM.get());

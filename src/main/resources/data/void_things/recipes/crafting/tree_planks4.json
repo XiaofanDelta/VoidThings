@@ -2,11 +2,11 @@
 	"type": "minecraft:crafting_shapeless",
 	"ingredients": [
 		{
-			"item": "void_things:tree_root"
+			"tag": "void_things:tree_logs"
 		}
 	],
 	"result": {
 		"item": "void_things:tree_planks",
-		"count": 6
+		"count": 4
 	}
 }
