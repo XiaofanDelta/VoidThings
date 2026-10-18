@@ -1,6 +1,7 @@
 package nothing.xiaofan_delta.void_things.common.register;
 
 import com.tterrag.registrate.util.entry.RegistryEntry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
@@ -11,10 +12,14 @@ public final class VTCreativeTabs {
 	public static final RegistryEntry<CreativeModeTab> VOID_TAB;
 
 	static {
-		VOID_TAB = VoidThings.REGISTRATE.defaultCreativeTab("void_tab", builder -> builder
+		VOID_TAB = VoidThings.REGISTRATE.simple(
+				"void_tab",
+				Registries.CREATIVE_MODE_TAB,
+				() -> CreativeModeTab.builder()
 						.title(Component.translatable("itemGroup.void_things.void_tab"))
-						.icon(() -> new ItemStack(VTItems.EMPTY_INGOT.get())))
-				.register();
+						.icon(() -> new ItemStack(VTItems.EMPTY_INGOT.get()))
+						.build()
+		);
 	}
 
 	private VTCreativeTabs() {

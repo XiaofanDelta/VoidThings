@@ -19,6 +19,7 @@ import nothing.xiaofan_delta.void_things.common.register.VTEffects;
 import nothing.xiaofan_delta.void_things.common.register.VTItems;
 import nothing.xiaofan_delta.void_things.common.register.VTMusicDisc;
 import nothing.xiaofan_delta.void_things.config.CommonConfig;
+import nothing.xiaofan_delta.void_things.datagen.language.LanguageGenerate;
 import nothing.xiaofan_delta.void_things.lib.VoidRegistrate;
 import org.slf4j.Logger;
 
@@ -57,6 +58,7 @@ public class VoidThings {
 		VTItems.register();
 		VTMusicDisc.register();
 		VTEffects.register();
+		LanguageGenerate.addEnglish();
 
 		// 注册事件监听
 		modEventBus.addListener(this::commonSetup);

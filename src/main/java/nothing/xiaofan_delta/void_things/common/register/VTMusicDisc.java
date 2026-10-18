@@ -35,8 +35,8 @@ public final class VTMusicDisc {
 		MAN_MUSIC_DISC = VoidThings.REGISTRATE.item("man_music_disc",
 						p -> new BasicRecordItem(MAN_RECORD_SPEC, p))
 				.properties(p -> p.rarity(Rarity.RARE))
-				.defaultModel()
 				.defaultLang()
+				.lang("Music Disc")
 				.tab(VTCreativeTabs.getTabKey())
 				.register();
 	}
