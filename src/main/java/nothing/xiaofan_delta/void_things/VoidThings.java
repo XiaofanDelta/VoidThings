@@ -1,10 +1,10 @@
 package nothing.xiaofan_delta.void_things;
 
 import com.mojang.logging.LogUtils;
+import dev.celestiacraft.libs.register.NebulaRegistrate;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -13,19 +13,20 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import nothing.xiaofan_delta.void_things.config.CommonConfig;
 import nothing.xiaofan_delta.void_things.common.register.VTBlocks;
 import nothing.xiaofan_delta.void_things.common.register.VTCreativeTabs;
 import nothing.xiaofan_delta.void_things.common.register.VTItems;
 import nothing.xiaofan_delta.void_things.common.register.VTMusicDisc;
+import nothing.xiaofan_delta.void_things.config.CommonConfig;
+import nothing.xiaofan_delta.void_things.lib.VoidRegistrate;
 import org.slf4j.Logger;
-import dev.celestiacraft.libs.NebulaLibs;
 
 @Mod(VoidThings.MODID)
 public class VoidThings {
 	public static final String MODID = "void_things";
 	public static final String NAME = "Void Things";
 	public static final Logger LOGGER = LogUtils.getLogger();
+	public static final NebulaRegistrate REGISTRATE = VoidRegistrate.REGISTRATE;
 
 	// 工具方法：获取模组命名空间下的资源路径
 	public static ResourceLocation loadResource(String path) {
@@ -45,15 +46,18 @@ public class VoidThings {
 	public VoidThings(FMLJavaModLoadingContext context) {
 		IEventBus modEventBus = context.getModEventBus();
 
-		// -------- 注册模块（拆分为独立类） --------
-		VTBlocks.register(modEventBus);
-		VTItems.register(modEventBus);
-		VTCreativeTabs.register(modEventBus);
-		VTMusicDisc.SOUND_EVENTS.register(modEventBus);
+		// -------- Registrate 入口 --------
+		VoidRegistrate.register(modEventBus);
+
+		// -------- 注册模块（静态初始化）--------
+		// 标签页必须先初始化，物品/方块的 .tab(...) 会引用它的 key
+		VTCreativeTabs.register();
+		VTBlocks.register();
+		VTItems.register();
+		VTMusicDisc.register();
 
 		// -------- 注册事件监听 --------
 		modEventBus.addListener(this::commonSetup);
-		modEventBus.addListener(this::addCreative);
 
 		// -------- 注册通用事件总线 --------
 		MinecraftForge.EVENT_BUS.register(this);
@@ -68,13 +72,6 @@ public class VoidThings {
 			// 在这里执行一些跨端（客户端/服务端）的初始化逻辑
 			LOGGER.info("{} 通用初始化完成！", NAME);
 		});
-	}
-
-	// -------- 将物品添加到创造模式标签页 --------
-	private void addCreative(BuildCreativeModeTabContentsEvent event) {
-		// if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-		//	 event.accept(VTItems.VOID_INGOT.get());
-		// }
 	}
 
 	// ============================================

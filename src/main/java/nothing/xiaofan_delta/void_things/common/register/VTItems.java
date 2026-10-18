@@ -1,124 +1,87 @@
 package nothing.xiaofan_delta.void_things.common.register;
 
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SmithingTemplateItem;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import nothing.xiaofan_delta.void_things.VoidThings;
 import nothing.xiaofan_delta.void_things.api.register.item.VTSmithingTemplateHelper;
 
-import java.util.ArrayList;
+public final class VTItems {
+	public static final ItemEntry<Item> EMPTY_INGOT;
+	public static final ItemEntry<Item> EMPTY_NUGGET;
+	public static final ItemEntry<Item> EMPTY_SHARD;
+	public static final ItemEntry<Item> EMPTY_STICK;
+	public static final ItemEntry<Item> EMPTY_PLATE;
+	public static final ItemEntry<Item> EGG;
+	public static final ItemEntry<Item> BEDROCK_SHARD;
+	public static final ItemEntry<SmithingTemplateItem> EMPTY_SMITHING_TEMPLATE;
 
-public class VTItems {
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, VoidThings.MODID);
+	static {
+		EMPTY_INGOT = VoidThings.REGISTRATE.item("empty_ingot", Item::new)
+				.properties(p -> p.stacksTo(64))
+				.defaultModel()
+				.defaultLang()
+				.tab(VTCreativeTabs.getTabKey())
+				.register();
 
-	// 注册物品
-	public static final RegistryObject<Item> EMPTY_INGOT = ITEMS.register("empty_ingot",
-			() -> new Item(new Item.Properties().stacksTo(64)));
+		EMPTY_NUGGET = VoidThings.REGISTRATE.item("empty_nugget", Item::new)
+				.properties(p -> p.stacksTo(64))
+				.defaultModel()
+				.defaultLang()
+				.tab(VTCreativeTabs.getTabKey())
+				.register();
 
-	public static final RegistryObject<Item> EMPTY_NUGGET = ITEMS.register("empty_nugget",
-			() -> new Item(new Item.Properties().stacksTo(64)));
+		EMPTY_SHARD = VoidThings.REGISTRATE.item("empty_shard", Item::new)
+				.properties(p -> p.stacksTo(16))
+				.defaultModel()
+				.defaultLang()
+				.tab(VTCreativeTabs.getTabKey())
+				.register();
 
-	public static final RegistryObject<Item> EMPTY_SHARD = ITEMS.register("empty_shard",
-			() -> new Item(new Item.Properties().stacksTo(16)));
+		EMPTY_STICK = VoidThings.REGISTRATE.item("empty_stick", Item::new)
+				.properties(p -> p.stacksTo(64))
+				.defaultModel()
+				.defaultLang()
+				.tab(VTCreativeTabs.getTabKey())
+				.register();
 
-	public static final RegistryObject<Item> EMPTY_STICK = ITEMS.register("empty_stick",
-			() -> new Item(new Item.Properties().stacksTo(64)));
+		EMPTY_PLATE = VoidThings.REGISTRATE.item("empty_plate", Item::new)
+				.properties(p -> p.stacksTo(64))
+				.defaultModel()
+				.defaultLang()
+				.tab(VTCreativeTabs.getTabKey())
+				.register();
 
-	public static final RegistryObject<Item> EMPTY_PLATE = ITEMS.register("empty_plate",
-			() -> new Item(new Item.Properties().stacksTo(64)));
+		EGG = VoidThings.REGISTRATE.item("egg", Item::new)
+				.properties(p -> p.stacksTo(16))
+				.defaultModel()
+				.defaultLang()
+				.tab(VTCreativeTabs.getTabKey())
+				.register();
 
-	public static final RegistryObject<Item> EGG = ITEMS.register("egg",
-			() -> new Item(new Item.Properties().stacksTo(16)));
+		BEDROCK_SHARD = VoidThings.REGISTRATE.item("bedrock_shard", Item::new)
+				.properties(p -> p.stacksTo(8))
+				.defaultModel()
+				.defaultLang()
+				.tab(VTCreativeTabs.getTabKey())
+				.register();
 
-	public static final RegistryObject<Item> BEDROCK_SHARD = ITEMS.register("bedrock_shard",
-			() -> new Item(new Item.Properties().stacksTo(8)));
+		EMPTY_SMITHING_TEMPLATE = VoidThings.REGISTRATE.item("empty_smithing_template",
+						p -> VTSmithingTemplateHelper.createSimple(
+								"empty",
+								VoidThings.loadResource("item/material/empty_shard"),
+								VoidThings.loadResource("item/material/empty_ingot")
+						))
+				.defaultModel()
+				.defaultLang()
+				.tab(VTCreativeTabs.getTabKey())
+				.register();
+	}
 
-	// 锻造模版
-	public static final RegistryObject<Item> EMPTY_SMITHING_TEMPLATE =
-			ITEMS.register("empty_smithing_template",
-					() -> VTSmithingTemplateHelper.createSimple(
-							"empty",
-							VoidThings.loadResource("item/material/empty_shard"),
-							VoidThings.loadResource("item/material/empty_ingot")
-							));
+	private VTItems() {
+	}
 
-	// 注册方块对应物品
-	public static final RegistryObject<Item> EMPTY_INGOT_BLOCK_ITEM = ITEMS.register("empty_ingot_block",
-			() -> new BlockItem(VTBlocks.EMPTY_INGOT_BLOCK.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> VOID_BEDROCK_ITEM = ITEMS.register("void_bedrock",
-			() -> new BlockItem(VTBlocks.VOID_BEDROCK.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> BEDSTONE_ITEM =
-			ITEMS.register("bedstone",
-					() -> new BlockItem(VTBlocks.BEDSTONE.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> BEDSTONE_BRICK_ITEM =
-			ITEMS.register("bedstone_brick",
-					() -> new BlockItem(VTBlocks.BEDSTONE_BRICK.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> CONTROLLER_ITEM =
-			ITEMS.register("controller",
-					() -> new BlockItem(VTBlocks.CONTROLLER.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> SAFETY_GLASS_ITEM =
-			ITEMS.register("safety_glass",
-					() -> new BlockItem(VTBlocks.SAFETY_GLASS.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> BLACK_BLOCK_ITEM =
-			ITEMS.register("black_block",
-					() -> new BlockItem(VTBlocks.BLACK_BLOCK.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> PURPLE_BLOCK_ITEM =
-			ITEMS.register("purple_block",
-					() -> new BlockItem(VTBlocks.PURPLE_BLOCK.get(), new Item.Properties()));
-
-	// 树后面有一个男人
-	public static final RegistryObject<Item> TREE_TRUNK_ITEM =
-			ITEMS.register("tree_trunk",
-					() -> new BlockItem(VTBlocks.TREE_TRUNK.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> TREE_TRUNK_TOP_ITEM =
-			ITEMS.register("tree_trunk_top",
-					() -> new BlockItem(VTBlocks.TREE_TRUNK_TOP.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> TREE_TRUNK_HALF_ITEM =
-			ITEMS.register("tree_trunk_half",
-					() -> new BlockItem(VTBlocks.TREE_TRUNK_HALF.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> TREE_BRANCH_ITEM =
-			ITEMS.register("tree_branch",
-					() -> new BlockItem(VTBlocks.TREE_BRANCH.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> TREE_ROOT_ITEM =
-			ITEMS.register("tree_root",
-					() -> new BlockItem(VTBlocks.TREE_ROOT.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> TREE_LEAVES_RED_ITEM =
-			ITEMS.register("tree_leaves_red",
-					() -> new BlockItem(VTBlocks.TREE_LEAVES_RED.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> TREE_LEAVES_PURPLE_ITEM =
-			ITEMS.register("tree_leaves_purple",
-					() -> new BlockItem(VTBlocks.TREE_LEAVES_PURPLE.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> TREE_LEAVES_DARK_PURPLE_ITEM =
-			ITEMS.register("tree_leaves_dark_purple",
-					() -> new BlockItem(VTBlocks.TREE_LEAVES_DARK_PURPLE.get(), new Item.Properties()));
-
-	public static final RegistryObject<Item> TREE_PLANKS_ITEM =
-			ITEMS.register("tree_planks",
-					() -> new BlockItem(VTBlocks.TREE_PLANKS.get(), new Item.Properties()));
-
-	// 注册方法
-	public static void register(IEventBus bus) {
-		ITEMS.register(bus);
+	public static void register() {
 		VoidThings.registerLog("物品");
 	}
 }

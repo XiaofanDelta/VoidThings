@@ -26,13 +26,16 @@ import java.util.List;
  * 使用示例：
  * <pre>{@code
  * // 最简用法（自动生成所有翻译键）
- * public static final RegistryObject<Item> VOID_SMITHING_TEMPLATE =
- *         ITEMS.register("smithing_template",
- *                 () -> VTSmithingTemplateHelper.createSimple(
- *                         "void_upgrade",
- *                         ResourceLocation.withDefaultNamespace("item/empty_slot_ingot"),
- *                         VoidThings.loadResource("item/empty_slot_shard")
- *                 ));
+ * public static final ItemEntry<Item> VOID_SMITHING_TEMPLATE =
+ *         VoidThings.REGISTRATE.item("smithing_template",
+ *                         p -> VTSmithingTemplateHelper.createSimple(
+ *                                 "void_upgrade",
+ *                                 ResourceLocation.withDefaultNamespace("item/empty_slot_ingot"),
+ *                                 VoidThings.loadResource("item/empty_slot_shard")
+ *                         ))
+ *                 .defaultModel()
+ *                 .defaultLang()
+ *                 .register();
  * }</pre>
  */
 public class VTSmithingTemplateHelper {
