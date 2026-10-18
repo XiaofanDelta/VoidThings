@@ -96,10 +96,6 @@ tasks.jar.configure {
 	archiveClassifier.set("slim")
 }
 
-sourceSets.main.resources {
-	srcDir "src/generated/resources"
-}
-
 // 仓库
 repositories {
 	mavenCentral()
