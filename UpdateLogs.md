@@ -4,7 +4,6 @@
  - 新增 `暗影残响` 效果
  - 新增 `void_things:egg` 落入原版水源的污染交互
  - 迁移数据生成, 统一生成方块状态/模型/战利品表/语言文件
- - 修复扔蛋时因液块获取失败导致的崩溃
 
 ## 0.0.2
  - 重命名模组名为 *【无物】*
@@ -26,7 +25,6 @@
  - Added `Darkness Echo` effect
  - Added `void_things:egg` contamination when dropped into vanilla water
  - Migrated data generation for blockstates/models/loot/lang
- - Fixed the crash caused by fluid block lookup when throwing an egg
 
 ## 0.0.2
  - Renamed Mod Name to *Void Things*
