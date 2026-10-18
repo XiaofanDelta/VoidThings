@@ -10,6 +10,6 @@ public class HorizontalBlock extends BasicBlock {
 
 	@Override
 	protected BlockFacing useFacingType() {
-		return BlockFacing.HORIZONTAL;  // 启用水平方向
+		return BlockFacing.HORIZONTAL; // 水平朝向
 	}
 }

@@ -1,11 +1,11 @@
-// ==================== buildscript 引入 ForgeGradle ====================
+// buildscript
 buildscript {
 	repositories {
-		// 公共依赖优先走中央/镜像，避免 Forge maven 的公共 POM 超时
+		// 公共依赖优先走中央/镜像
 		mavenCentral()
 		maven { url = 'https://maven.aliyun.com/repository/public' }
 		maven { url = 'https://maven.aliyun.com/repository/central' }
-		// Forge/ForgeGradle 国内镜像（BMCLAPI），官方 Forge maven 作为兜底
+		// Forge/ForgeGradle 国内镜像
 		maven { url = 'https://bmclapi2.bangbang93.com/maven' }
 		maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
 		maven { url = "https://maven.lirxowo.com/releases" }
@@ -18,7 +18,7 @@ buildscript {
 	}
 }
 
-// ==================== 应用插件 ====================
+// 插件
 plugins {
 	id "eclipse"
 	id "idea"
@@ -27,12 +27,12 @@ plugins {
 	id "org.parchmentmc.librarian.forgegradle" version "1.+"
 }
 
-// ==================== 打印信息 ====================
+// 打印信息
 println "=== Gradle JVM: ${System.getProperty("java.home")} ==="
 println "=== Java Version: ${System.getProperty("java.version")} ==="
 
 
-// ==================== 基本信息 ====================
+// 基本信息
 version = mod_version
 group = mod_group_id
 
@@ -40,14 +40,13 @@ base {
 	archivesName = "VoidThings"
 }
 
-// ==================== Java 环境 ====================
+// Java 环境
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 
-// ==================== Minecraft 配置 ====================
+// Minecraft 配置
 minecraft {
-	// mappings channel: "parchment", version: "2023.09.03-1.20.1"
 	mappings channel: mapping_channel, version: mapping_version
 	copyIdeResources = true
 	runs {
@@ -101,20 +100,15 @@ sourceSets.main.resources {
 	srcDir "src/generated/resources"
 }
 
-// mixin {
-//	add sourceSets.main, "${mod_id}.refmap.json"
-//	config "${mod_id}.mixins.json"
-// }
-
-// ==================== 仓库配置 ====================
+// 仓库
 repositories {
 	mavenCentral()
-	// JEI 官方可用源 (modmaven.dev 在当前网络下会超时)
+	// JEI 源
 	maven {
 		name = "Jared's maven (JEI)"
 		url = "https://maven.blamejared.com/"
 	}
-	// Forge/ForgeGradle 国内镜像 (BMCLAPI)
+	// Forge 镜像
 	maven {
 		name = "BMCLAPI Maven"
 		url = "https://bmclapi2.bangbang93.com/maven"
@@ -203,7 +197,7 @@ repositories {
 	}
 }
 
-// ==================== 依赖配置 ====================
+// 依赖
 dependencies {
 	minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
@@ -222,7 +216,7 @@ dependencies {
 	jarJar(group: "com.tterrag.registrate", name: "Registrate", version: "[MC1.20-1.3.3]")
 }
 
-// ==================== 资源处理 ====================
+// 资源处理
 tasks.named("processResources", ProcessResources).configure {
 	def replaceProperties = [
 			minecraft_version      : minecraft_version,
@@ -244,7 +238,7 @@ tasks.named("processResources", ProcessResources).configure {
 	}
 }
 
-// ==================== JAR 打包 ====================
+// JAR 打包
 tasks.named("jar", Jar).configure {
 	manifest {
 		attributes([
@@ -260,7 +254,7 @@ tasks.named("jar", Jar).configure {
 	finalizedBy "reobfJar"
 }
 
-// ==================== 编译编码 ====================
+// 编译编码
 tasks.withType(JavaCompile).configureEach {
 	options.encoding = "UTF-8"
 	options.compilerArgs << "-parameters"

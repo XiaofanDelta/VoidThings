@@ -19,15 +19,8 @@ public class ClientRenderHandler {
 	@SubscribeEvent
 	public static void onClientSetup(@NotNull FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-
-			// 使用 translucent（半透明混合）
-			// ItemBlockRenderTypes.setRenderLayer(VTBlocks.SAFETY_GLASS.get(), RenderType.translucent());
-
-			// 使用 cutout
-			// ItemBlockRenderTypes.setRenderLayer(VTBlocks.CONTROLLER.get(), RenderType.cutout());
-			// ItemBlockRenderTypes.setRenderLayer(VTBlocks.EMPTY_INGOT_BLOCK.get(), RenderType.cutout());
+			// 方块渲染层
 			ItemBlockRenderTypes.setRenderLayer(VTBlocks.EMPTY_INGOT_BLOCK.get(), RenderType.cutoutMipped());
-
 		});
 	}
 }

@@ -35,10 +35,10 @@ public class LeftClick implements IRecipeCategory<LeftClickRecipe> {
 	private final Component title;
 
 	public LeftClick(IGuiHelper guiHelper) {
-		// 背景纹理（假设 UV 从 (0,0) 开始，尺寸为 GUI_WIDTH × GUI_HEIGHT）
+		// 背景纹理, UV 从 (0, 0) 开始
 		this.background = guiHelper.createDrawable(GUI_TEXTURE, 0, 0, GUI_WIDTH, GUI_HEIGHT);
 
-		// 图标：使用无之碎片
+		// 图标: 无之碎片
 		this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK,
 				new ItemStack(VTItems.EMPTY_SHARD.get()));
 
@@ -68,19 +68,19 @@ public class LeftClick implements IRecipeCategory<LeftClickRecipe> {
 
 	@Override
 	public void setRecipe(IRecipeLayoutBuilder builder, LeftClickRecipe recipe, IFocusGroup focuses) {
-		// 工具槽 (47, 11)
+		// 工具槽
 		builder.addSlot(RecipeIngredientRole.CATALYST, 47, 11)
 				.addItemStack(recipe.getTool());
 
-		// 方块输入槽 (15, 45)
+		// 方块输入槽
 		builder.addSlot(RecipeIngredientRole.INPUT, 15, 45)
 				.addItemStack(recipe.getInputBlock());
 
-		// 方块输出槽 (97, 45)
+		// 方块输出槽
 		builder.addSlot(RecipeIngredientRole.OUTPUT, 97, 45)
 				.addItemStack(recipe.getOutputBlock());
 
-		// 物品输出槽 (56, 74)
+		// 物品输出槽
 		builder.addSlot(RecipeIngredientRole.OUTPUT, 56, 74)
 				.addItemStack(recipe.getResultItem());
 	}
@@ -88,10 +88,6 @@ public class LeftClick implements IRecipeCategory<LeftClickRecipe> {
 	@Override
 	public void draw(LeftClickRecipe recipe, IRecipeSlotsView slotsView, GuiGraphics graphics,
 	                 double mouseX, double mouseY) {
-		// 如果你需要在背景上绘制额外的箭头或文字，可以在这里画
-		// 例如在槽位之间画 "→" 或 "+" 符号
-
-		// 示例：在输入和输出之间画一个箭头（坐标根据你的纹理布局调整）
-		// graphics.drawString(Minecraft.getInstance().font, "→", 55, 60, 0xFFFFFF, false);
+		// 可在此绘制额外内容
 	}
 }

@@ -9,10 +9,7 @@ import nothing.xiaofan_delta.void_things.common.register.VTEffects;
 import nothing.xiaofan_delta.void_things.config.CommonConfig;
 
 /**
- * 暗影残响的环境清除逻辑。
- * <p>
- * 只在服务端、主世界类维度、白天时移除；梦魇维度通常固定夜晚，
- * 不会被这里误清。
+ * 暗影残响: 白天自动清除.
  */
 @Mod.EventBusSubscriber(modid = VoidThings.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class DarknessEchoEvents {

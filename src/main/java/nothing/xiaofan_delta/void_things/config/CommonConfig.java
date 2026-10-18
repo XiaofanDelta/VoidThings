@@ -17,12 +17,12 @@ import java.util.stream.Collectors;
 public class CommonConfig {
 	private static final Logger LOGGER = LogUtils.getLogger();
 
-	// ---------- 交互物品配置 ----------
+	// 交互物品
 	public static ForgeConfigSpec.ConfigValue<List<? extends String>> VOID_BEDROCK_USABLE_ITEMS;
-	// 运行时解析后的物品集合（方便快速查找）
+	// 解析后的物品集合
 	public static Set<ResourceLocation> VOID_BEDROCK_USABLE_ITEMS_SET;
 
-	// ---------- 暗影残响 ----------
+	// 暗影残响
 	public static ForgeConfigSpec.BooleanValue DARKNESS_ECHO_CLEAR_AT_DAY;
 	public static ForgeConfigSpec.IntValue DARKNESS_ECHO_DURATION;
 
@@ -31,7 +31,7 @@ public class CommonConfig {
 	static {
 		ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
 
-		// ===== 交互物品 =====
+		// 交互物品
 		builder.comment("Items that can interact with void bedrock (left-click)").push("interaction");
 		VOID_BEDROCK_USABLE_ITEMS = builder
 				.comment("List of item registry names (e.g. 'minecraft:netherite_pickaxe')")
@@ -39,7 +39,7 @@ public class CommonConfig {
 						CommonConfig::validateItemName);
 		builder.pop();
 
-		// ===== 暗影残响 =====
+		// 暗影残响
 		builder.comment("Darkness Echo effect settings").push("effect");
 		DARKNESS_ECHO_CLEAR_AT_DAY = builder
 				.comment("Remove Darkness Echo when it becomes day in natural dimensions")
@@ -58,7 +58,7 @@ public class CommonConfig {
 
 	@SubscribeEvent
 	static void onLoad(final ModConfigEvent event) {
-		// 解析物品列表为 ResourceLocation 集合
+		// 解析物品列表
 		VOID_BEDROCK_USABLE_ITEMS_SET = VOID_BEDROCK_USABLE_ITEMS.get().stream()
 				.map(ResourceLocation::new)
 				.collect(Collectors.toSet());

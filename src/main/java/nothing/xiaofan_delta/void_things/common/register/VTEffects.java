@@ -20,7 +20,7 @@ public final class VTEffects {
 						return;
 					}
 
-					// 每秒补一次短时反胃，避免每 tick 重置效果
+					// 每秒补一次短时反胃, 避免每 tick 重置
 					if (!entity.hasEffect(MobEffects.CONFUSION)) {
 						entity.addEffect(new MobEffectInstance(
 								MobEffects.CONFUSION,

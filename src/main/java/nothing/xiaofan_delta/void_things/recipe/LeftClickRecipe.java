@@ -11,10 +11,10 @@ import net.minecraft.world.level.Level;
 
 public class LeftClickRecipe implements Recipe<Container> {
 	private final ResourceLocation id;
-	private final ItemStack tool;          // 需要的工具（如下界合金镐）
-	private final ItemStack inputBlock;    // 输入方块（虚空基岩）
-	private final ItemStack outputBlock;   // 输出方块（基岩）
-	private final ItemStack resultItem;    // 掉落物（无之碎片）
+	private final ItemStack tool;        // 工具
+	private final ItemStack inputBlock;  // 输入方块
+	private final ItemStack outputBlock; // 输出方块
+	private final ItemStack resultItem;  // 掉落物
 
 	public LeftClickRecipe(ResourceLocation id, ItemStack tool, ItemStack inputBlock,
 	                       ItemStack outputBlock, ItemStack resultItem) {
@@ -25,13 +25,13 @@ public class LeftClickRecipe implements Recipe<Container> {
 		this.resultItem = resultItem;
 	}
 
-	// -------- Getters ----------
+	// Getters
 	public ItemStack getTool() { return tool; }
 	public ItemStack getInputBlock() { return inputBlock; }
 	public ItemStack getOutputBlock() { return outputBlock; }
 	public ItemStack getResultItem() { return resultItem; }
 
-	// -------- Recipe 接口必须实现的方法 ----------
+	// Recipe 方法
 	@Override
 	public ResourceLocation getId() {
 		return id;
@@ -48,15 +48,23 @@ public class LeftClickRecipe implements Recipe<Container> {
 	}
 
 	/**
-	 * 1.20.1 官方映射中，matches 需要 Container 和 Level 参数
+	 * 仅用于 JEI 显示.
+	 *
+	 * @param container 容器
+	 * @param level 世界
+	 * @return 始终 false
 	 */
 	@Override
 	public boolean matches(Container container, Level level) {
-		return false; // 我们只用于 JEI 显示，不需要容器匹配
+		return false; // 仅用于 JEI 显示
 	}
 
 	/**
-	 * 1.20.1 官方映射中，assemble 需要 Container 和 RegistryAccess 参数
+	 * 返回配方结果.
+	 *
+	 * @param container 容器
+	 * @param registryAccess 注册表访问
+	 * @return 结果副本
 	 */
 	@Override
 	public ItemStack assemble(Container container, RegistryAccess registryAccess) {
@@ -64,8 +72,10 @@ public class LeftClickRecipe implements Recipe<Container> {
 	}
 
 	/**
-	 * 1.20.1 官方映射中，getResultItem 需要 RegistryAccess 参数
-	 * 注意：这里的返回值是「配方展示用的结果」，实际掉落逻辑在事件中处理
+	 * 返回 JEI 展示结果.
+	 *
+	 * @param registryAccess 注册表访问
+	 * @return 结果副本
 	 */
 	@Override
 	public ItemStack getResultItem(RegistryAccess registryAccess) {

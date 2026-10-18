@@ -12,8 +12,7 @@ public class LeftClickRecipeSerializer implements RecipeSerializer<LeftClickReci
 
 	@Override
 	public LeftClickRecipe fromJson(ResourceLocation id, JsonObject json) {
-		// 我们暂时不实现从 JSON 读取，而是在代码中硬编码注册
-		// 如果你想做成数据驱动的，可以在这里实现
+		// 暂不实现 JSON 读取
 		throw new UnsupportedOperationException("Data-driven not implemented yet");
 	}
 

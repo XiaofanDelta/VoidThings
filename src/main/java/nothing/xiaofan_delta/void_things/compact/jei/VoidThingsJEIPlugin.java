@@ -44,7 +44,7 @@ public class VoidThingsJEIPlugin implements IModPlugin {
 
 	@Override
 	public void registerRecipes(IRecipeRegistration registration) {
-		// -------- 注册默认工作台配方（保持不变）--------
+		// 注册默认工作台配方
 		RecipeManager recipeManager = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
 		registration.addRecipes(
 				RecipeTypes.CRAFTING,
@@ -54,24 +54,24 @@ public class VoidThingsJEIPlugin implements IModPlugin {
 						.toList()
 		);
 
-		// -------- 从配置读取可用工具列表 --------
+		// 读取可用工具列表
 		List<? extends String> toolIds = CommonConfig.VOID_BEDROCK_USABLE_ITEMS.get();
 		List<LeftClickRecipe> leftClickRecipes = new ArrayList<>();
 
-		// 输入/输出方块固定
+		// 固定输入/输出方块
 		ItemStack inputBlock = new ItemStack(VTBlocks.VOID_BEDROCK.get());
 		ItemStack outputBlock = new ItemStack(Items.BEDROCK);
 		ItemStack resultItem = new ItemStack(VTItems.EMPTY_SHARD.get());
 
 		for (String toolId : toolIds) {
-			// 根据物品 ID 获取物品实例
+			// 获取物品实例
 			Item toolItem = ForgeRegistries.ITEMS.getValue(ResourceLocation.parse(toolId));
 			if (toolItem == null) {
 				VoidThings.LOGGER.warn("配置中的物品 '{}' 不存在，跳过！", toolId);
 				continue;
 			}
 
-			// 为每个工具生成一个配方实例
+			// 生成配方
 			ResourceLocation recipeId = ResourceLocation.parse(
 					VoidThings.MODID + ":left_click/" + toolId.replace(':', '/')
 			);
@@ -85,14 +85,14 @@ public class VoidThingsJEIPlugin implements IModPlugin {
 			leftClickRecipes.add(recipe);
 		}
 
-		// 注册所有生成的配方
+		// 注册配方
 		registration.addRecipes(LeftClick.RECIPE_TYPE, leftClickRecipes);
 	}
 
 
 	@Override
 	public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-		// 可以添加“催化剂”，在 JEI 中点击虚空基岩时显示相关配方
+		// 添加催化剂
 		registration.addRecipeCatalyst(
 				new ItemStack(VTBlocks.VOID_BEDROCK.get()),
 				LeftClick.RECIPE_TYPE

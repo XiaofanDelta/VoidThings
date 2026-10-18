@@ -29,17 +29,17 @@ public class VoidThings {
 	public static final Logger LOGGER = LogUtils.getLogger();
 	public static final NebulaRegistrate REGISTRATE = VoidRegistrate.REGISTRATE;
 
-	// 工具方法：获取模组命名空间下的资源路径
+	// 获取模组资源路径
 	public static ResourceLocation loadResource(String path) {
 		return ResourceLocation.fromNamespaceAndPath(MODID, path);
 	}
 
-	// 工具方法：获取 GUI 纹理路径
+	// 获取 GUI 纹理路径
 	public static ResourceLocation loadGui(String path) {
 		return loadResource("textures/gui/%s.png".formatted(path));
 	}
 
-	// 工具方法：记录注册信息
+	// 记录注册日志
 	public static void registerLog(String registerType) {
 		LOGGER.info("{} {} 已注册！", NAME, registerType);
 	}
@@ -47,51 +47,47 @@ public class VoidThings {
 	public VoidThings(FMLJavaModLoadingContext context) {
 		IEventBus modEventBus = context.getModEventBus();
 
-		// -------- Registrate 入口 --------
+		// Registrate 入口
 		VoidRegistrate.register(modEventBus);
 
-		// -------- 注册模块（静态初始化）--------
-		// 标签页必须先初始化，物品/方块的 .tab(...) 会引用它的 key
+		// 注册模块
+		// 标签页需先初始化, .tab(...) 会引用它的 key
 		VTCreativeTabs.register();
 		VTBlocks.register();
 		VTItems.register();
 		VTMusicDisc.register();
 		VTEffects.register();
 
-		// -------- 注册事件监听 --------
+		// 注册事件监听
 		modEventBus.addListener(this::commonSetup);
 
-		// -------- 注册通用事件总线 --------
+		// 注册通用事件总线
 		MinecraftForge.EVENT_BUS.register(this);
 
-		// -------- 注册配置文件 --------
+		// 注册配置文件
 		context.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
 	}
 
-	// -------- 通用初始化（FMLCommonSetupEvent） --------
+	// 通用初始化 (FMLCommonSetupEvent)
 	private void commonSetup(final FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			// 在这里执行一些跨端（客户端/服务端）的初始化逻辑
+			// 跨端初始化逻辑
 			LOGGER.info("{} 通用初始化完成！", NAME);
 		});
 	}
 
-	// ============================================
-	// 服务端事件（@SubscribeEvent）
-	// ============================================
+	// 服务端事件 (@SubscribeEvent)
 	@SubscribeEvent
 	public void onServerStarting(ServerStartingEvent event) {
 		LOGGER.info("{} 服务端启动！", NAME);
 	}
 
-	// ============================================
-	// 客户端事件（@EventBusSubscriber）
-	// ============================================
+	// 客户端事件 (@EventBusSubscriber)
 	@Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientModEvents {
 		@SubscribeEvent
 		public static void onClientSetup(FMLClientSetupEvent event) {
-			// 客户端初始化逻辑（如：注册按键绑定、模型等）
+			// 客户端初始化逻辑
 			LOGGER.info("{} 客户端初始化完成！", NAME);
 		}
 	}

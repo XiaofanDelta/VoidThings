@@ -6,10 +6,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 
 /**
- * 暗影残响。
- * <p>
- * 反胃与减速的持续效果由 {@link BasicEffect} 的回调驱动；
- * 具体触发场景 (梦魇死亡惊醒) 在 DP/梦魇模块中接入
+ * 暗影残响: 反胃 + 减速, 梦魇死亡时施加.
  */
 public class DarknessEchoEffect extends BasicEffect {
 	private static final String MOVEMENT_SPEED_MODIFIER =

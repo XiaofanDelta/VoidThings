@@ -28,46 +28,45 @@ import nothing.xiaofan_delta.void_things.config.CommonConfig;
 public class VoidBedrockHandler {
 	@SubscribeEvent
 	public static void onLeftClickBlock(PlayerInteractEvent.LeftClickBlock event) {
-		// 1. 获取玩家和世界
+		// 获取玩家和世界
 		Player player = event.getEntity();
 		Level level = event.getLevel();
 		BlockPos pos = event.getPos();
 
-		// 2. 检查点击的是否是虚空基岩
+		// 检查虚空基岩
 		if (!level.getBlockState(pos).is(VTBlocks.VOID_BEDROCK.get())) {
 			return;
 		}
 
-		// 3. 检查是否拿着下界合金镐
+		// 检查工具
 		ItemStack heldItem = player.getMainHandItem();
 		ResourceLocation heldItemId = ForgeRegistries.ITEMS.getKey(heldItem.getItem());
 		if (heldItemId == null || !CommonConfig.VOID_BEDROCK_USABLE_ITEMS_SET.contains(heldItemId)) {
-			return;  // 物品不在配置列表中，无反应
+			return; // 物品未配置
 		}
 
-		// 4. 防止在服务端逻辑中重复触发（只处理服务端）
+		// 仅处理服务端
 		if (level.isClientSide()) {
 			return;
 		}
 
-		// 5a. 替换为基岩
+		// 替换为基岩
 		level.setBlockAndUpdate(pos, Blocks.BEDROCK.defaultBlockState());
 
-		// 5b. 将“无之碎片”生成在基岩上方
-		BlockPos dropPos = pos.above();  // 基岩正上方一格
+		// 生成无之碎片
+		BlockPos dropPos = pos.above(); // 基岩上方
 		ItemStack shard = new ItemStack(VTItems.EMPTY_SHARD.get(), 1);
-		// 使用 addFreshEntity 生成在世界中
 		level.addFreshEntity(new ItemEntity(level,
-				dropPos.getX() + 0.5,  // X 居中
-				dropPos.getY() + 0.5,  // Y 在方块中心偏上一点
-				dropPos.getZ() + 0.5,  // Z 居中
+				dropPos.getX() + 0.5, // X 居中
+				dropPos.getY() + 0.5, // Y 居中偏上
+				dropPos.getZ() + 0.5, // Z 居中
 				shard
 		));
 
-		// 5c. 减少下界合金镐耐久
+		// 消耗耐久
 		heldItem.hurt(1, player.getRandom(), (ServerPlayer) player);
 
-		// 5d. 播放音效
+		// 播放音效
 		level.playSound(
 				null,
 				pos,
@@ -77,7 +76,7 @@ public class VoidBedrockHandler {
 				1.0F
 		);
 
-		// 5e. 生成粒子（黑色/紫色漩涡）
+		// 生成粒子
 		if (level instanceof ServerLevel serverLevel) {
 			serverLevel.sendParticles(ParticleTypes.PORTAL,
 					pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
