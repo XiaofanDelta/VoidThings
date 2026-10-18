@@ -22,6 +22,10 @@ public class CommonConfig {
 	// 运行时解析后的物品集合（方便快速查找）
 	public static Set<ResourceLocation> VOID_BEDROCK_USABLE_ITEMS_SET;
 
+	// ---------- 暗影残响 ----------
+	public static ForgeConfigSpec.BooleanValue DARKNESS_ECHO_CLEAR_AT_DAY;
+	public static ForgeConfigSpec.IntValue DARKNESS_ECHO_DURATION;
+
 	public static final ForgeConfigSpec SPEC;
 
 	static {
@@ -33,6 +37,16 @@ public class CommonConfig {
 				.comment("List of item registry names (e.g. 'minecraft:netherite_pickaxe')")
 				.defineListAllowEmpty("usableItems", List.of("minecraft:netherite_pickaxe"),
 						CommonConfig::validateItemName);
+		builder.pop();
+
+		// ===== 暗影残响 =====
+		builder.comment("Darkness Echo effect settings").push("effect");
+		DARKNESS_ECHO_CLEAR_AT_DAY = builder
+				.comment("Remove Darkness Echo when it becomes day in natural dimensions")
+				.define("darknessEchoClearAtDay", true);
+		DARKNESS_ECHO_DURATION = builder
+				.comment("Duration of Darkness Echo applied after a nightmare death, in ticks")
+				.defineInRange("darknessEchoDuration", 6000, 20, 72000);
 		builder.pop();
 
 		SPEC = builder.build();

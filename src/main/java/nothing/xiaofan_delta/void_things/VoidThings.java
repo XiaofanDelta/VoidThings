@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import nothing.xiaofan_delta.void_things.common.register.VTBlocks;
 import nothing.xiaofan_delta.void_things.common.register.VTCreativeTabs;
+import nothing.xiaofan_delta.void_things.common.register.VTEffects;
 import nothing.xiaofan_delta.void_things.common.register.VTItems;
 import nothing.xiaofan_delta.void_things.common.register.VTMusicDisc;
 import nothing.xiaofan_delta.void_things.config.CommonConfig;
@@ -55,6 +56,7 @@ public class VoidThings {
 		VTBlocks.register();
 		VTItems.register();
 		VTMusicDisc.register();
+		VTEffects.register();
 
 		// -------- 注册事件监听 --------
 		modEventBus.addListener(this::commonSetup);

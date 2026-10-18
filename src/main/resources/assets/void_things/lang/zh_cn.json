@@ -35,5 +35,8 @@
 	"block.void_things.tree_leaves_dark_purple": "§l树§r叶 (§5暗紫色§r)",
 	"block.void_things.tree_planks": "§l树§r板材",
 
-	"jei.void_things.left_click": "左键点击"
+	"jei.void_things.left_click": "左键点击",
+
+	"effect.void_things.darkness_echo": "暗影残响",
+	"effect.void_things.darkness_echo.description": "视野被暗影侵蚀，脚步变得沉重。"
 }

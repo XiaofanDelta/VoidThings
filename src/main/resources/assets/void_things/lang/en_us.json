@@ -36,5 +36,8 @@
 	"block.void_things.tree_leaves_dark_purple": "§lTREE§r Leaves (Dark Purple)",
 	"block.void_things.tree_planks": "§lTREE§r Planks",
 
-	"jei.void_things.left_click": "Left Clicking"
+	"jei.void_things.left_click": "Left Clicking",
+
+	"effect.void_things.darkness_echo": "Darkness Echo",
+	"effect.void_things.darkness_echo.description": "Shadows cloud your vision and weigh down your steps."
 }
