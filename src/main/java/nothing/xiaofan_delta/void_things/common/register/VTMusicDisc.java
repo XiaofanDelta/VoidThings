@@ -10,10 +10,10 @@ import net.minecraft.world.item.Rarity;
 import nothing.xiaofan_delta.void_things.VoidThings;
 
 /**
- * 无物模组的唱片注册类。
+ * 无物模组的唱片注册类
  * <p>
- * 使用 Nebula Libs 的 {@link RecordSpec} + {@link BasicRecordItem}，
- * 仅保留声音事件与唱片物品两个注册项。
+ * 使用 Nebula Libs 的 {@link RecordSpec} + {@link BasicRecordItem}
+ * 仅保留声音事件与唱片物品两个注册项
  */
 public final class VTMusicDisc {
 	public static final RegistryEntry<SoundEvent> MAN_SOUND;
