@@ -5,6 +5,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SmithingTemplateItem;
 import nothing.xiaofan_delta.void_things.VoidThings;
 import nothing.xiaofan_delta.void_things.api.register.item.VTSmithingTemplateHelper;
+import nothing.xiaofan_delta.void_things.common.item.VoidEggItem;
 
 public final class VTItems {
 	public static final ItemEntry<Item> EMPTY_INGOT;
@@ -12,7 +13,7 @@ public final class VTItems {
 	public static final ItemEntry<Item> EMPTY_SHARD;
 	public static final ItemEntry<Item> EMPTY_STICK;
 	public static final ItemEntry<Item> EMPTY_PLATE;
-	public static final ItemEntry<Item> EGG;
+	public static final ItemEntry<VoidEggItem> EGG;
 	public static final ItemEntry<Item> BEDROCK_SHARD;
 	public static final ItemEntry<SmithingTemplateItem> EMPTY_SMITHING_TEMPLATE;
 
@@ -47,7 +48,7 @@ public final class VTItems {
 				.tab(VTCreativeTabs.getTabKey())
 				.register();
 
-		EGG = VoidThings.REGISTRATE.item("egg", Item::new)
+		EGG = VoidThings.REGISTRATE.item("egg", VoidEggItem::new)
 				.properties(p -> p.stacksTo(16))
 				.defaultLang()
 				.tab(VTCreativeTabs.getTabKey())

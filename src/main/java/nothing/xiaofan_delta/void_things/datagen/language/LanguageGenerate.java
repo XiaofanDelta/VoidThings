@@ -53,6 +53,7 @@ public final class LanguageGenerate {
 			}
 			if (key.startsWith("item.")
 					&& !key.equals("item.void_things.empty_smithing_template")
+					&& !key.equals("item.void_things.water_bucket")
 					&& !key.endsWith(".desc")
 					&& !key.endsWith(".applies_to")
 					&& !key.endsWith(".addition_slot")

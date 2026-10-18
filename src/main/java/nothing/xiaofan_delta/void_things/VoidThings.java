@@ -5,6 +5,7 @@ import dev.celestiacraft.libs.register.NebulaRegistrate;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import nothing.xiaofan_delta.void_things.common.register.VTBlocks;
 import nothing.xiaofan_delta.void_things.common.register.VTCreativeTabs;
 import nothing.xiaofan_delta.void_things.common.register.VTEffects;
+import nothing.xiaofan_delta.void_things.common.register.VTFluids;
 import nothing.xiaofan_delta.void_things.common.register.VTItems;
 import nothing.xiaofan_delta.void_things.common.register.VTMusicDisc;
 import nothing.xiaofan_delta.void_things.config.CommonConfig;
@@ -56,12 +58,14 @@ public class VoidThings {
 		VTCreativeTabs.register();
 		VTBlocks.register();
 		VTItems.register();
+		VTFluids.register();
 		VTMusicDisc.register();
 		VTEffects.register();
 		LanguageGenerate.addEnglish();
 
 		// 注册事件监听
 		modEventBus.addListener(this::commonSetup);
+		modEventBus.addListener(this::addCreative);
 
 		// 注册通用事件总线
 		MinecraftForge.EVENT_BUS.register(this);
@@ -76,6 +80,13 @@ public class VoidThings {
 			// 跨端初始化逻辑
 			LOGGER.info("{} 通用初始化完成！", NAME);
 		});
+	}
+
+	// 添加流体桶等非 Registrate 默认标签页内容
+	private void addCreative(BuildCreativeModeTabContentsEvent event) {
+		if (event.getTabKey().equals(VTCreativeTabs.getTabKey())) {
+			VTFluids.WATER.getBucket().ifPresent(item -> event.accept(item));
+		}
 	}
 
 	// 服务端事件 (@SubscribeEvent)
