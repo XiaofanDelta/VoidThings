@@ -1,8 +1,9 @@
 {
+	"format_version": "1.9.0",
 	"texture_size": [64, 64],
 	"textures": {
-		"particle": "void_things:block/deco/controller",
-		"controller": "void_things:block/deco/controller"
+		"controller": "void_things:block/deco/controller",
+		"particle": "void_things:block/material/white_ingot_block"
 	},
 	"elements": [
 		{
