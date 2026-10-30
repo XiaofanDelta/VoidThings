@@ -54,7 +54,6 @@ public class VoidThings {
 		VoidRegistrate.register(modEventBus);
 
 		// 注册模块
-		// 标签页需先初始化, .tab(...) 会引用它的 key
 		VTCreativeTabs.register();
 		VTBlocks.register();
 		VTItems.register();
@@ -77,15 +76,14 @@ public class VoidThings {
 	// 通用初始化 (FMLCommonSetupEvent)
 	private void commonSetup(final FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			// 跨端初始化逻辑
 			LOGGER.info("{} 通用初始化完成！", NAME);
 		});
 	}
 
-	// 添加流体桶等非 Registrate 默认标签页内容
+	// 添加水桶等非默认标签页内容
 	private void addCreative(BuildCreativeModeTabContentsEvent event) {
 		if (event.getTabKey().equals(VTCreativeTabs.getTabKey())) {
-			VTFluids.WATER.getBucket().ifPresent(item -> event.accept(item));
+			VTFluids.WATER.getBucket().ifPresent((item) -> event.accept(item));
 		}
 	}
 
@@ -100,7 +98,6 @@ public class VoidThings {
 	public static class ClientModEvents {
 		@SubscribeEvent
 		public static void onClientSetup(FMLClientSetupEvent event) {
-			// 客户端初始化逻辑
 			LOGGER.info("{} 客户端初始化完成！", NAME);
 		}
 	}
