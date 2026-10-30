@@ -14,6 +14,6 @@ public class VTChineseLanguageProvider extends LanguageProvider {
 
 	@Override
 	protected void addTranslations() {
-		LanguageGenerate.entries().forEach((key, values) -> add(key, values[1]));
+		LanguageGenerate.entries().forEach((translationKey, translations) -> add(translationKey, translations[1]));
 	}
 }

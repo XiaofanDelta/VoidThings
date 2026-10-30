@@ -26,42 +26,42 @@ public final class LanguageGenerate {
 	private LanguageGenerate() {
 	}
 
-	public static void addItem(String key, String english, String chinese) {
-		add("item", key, english, chinese);
+	public static void addItem(String translationKey, String english, String chinese) {
+		add("item", translationKey, english, chinese);
 	}
 
-	public static void addBlock(String key, String english, String chinese) {
-		add("block", key, english, chinese);
+	public static void addBlock(String translationKey, String english, String chinese) {
+		add("block", translationKey, english, chinese);
 	}
 
-	public static void addEffect(String key, String english, String chinese) {
-		add("effect", key, english, chinese);
+	public static void addEffect(String translationKey, String english, String chinese) {
+		add("effect", translationKey, english, chinese);
 	}
 
-	public static void addRaw(String key, String english, String chinese) {
-		TRANSLATIONS.put(key, new String[]{english, chinese});
+	public static void addRaw(String translationKey, String english, String chinese) {
+		TRANSLATIONS.put(translationKey, new String[]{english, chinese});
 	}
 
-	private static void add(String type, String key, String english, String chinese) {
-		addRaw(String.format("%s.%s.%s", type, VoidThings.MODID, key), english, chinese);
+	private static void add(String translationType, String translationKey, String english, String chinese) {
+		addRaw(String.format("%s.%s.%s", translationType, VoidThings.MODID, translationKey), english, chinese);
 	}
 
 	public static void addEnglish() {
-		TRANSLATIONS.forEach((key, values) -> {
-			if (key.startsWith("block.")) {
+		TRANSLATIONS.forEach((translationKey, translations) -> {
+			if (translationKey.startsWith("block.")) {
 				return;
 			}
-			if (key.startsWith("item.")
-					&& !key.equals("item.void_things.empty_smithing_template")
-					&& !key.equals("item.void_things.water_bucket")
-					&& !key.endsWith(".desc")
-					&& !key.endsWith(".applies_to")
-					&& !key.endsWith(".addition_slot")
-					&& !key.endsWith(".ingredients")
-					&& !key.endsWith(".base_slot")) {
+			if (translationKey.startsWith("item.")
+					&& !translationKey.equals("item.void_things.empty_smithing_template")
+					&& !translationKey.equals("item.void_things.water_bucket")
+					&& !translationKey.endsWith(".desc")
+					&& !translationKey.endsWith(".applies_to")
+					&& !translationKey.endsWith(".addition_slot")
+					&& !translationKey.endsWith(".ingredients")
+					&& !translationKey.endsWith(".base_slot")) {
 				return;
 			}
-			VoidThings.REGISTRATE.addRawLang(key, values[0]);
+			VoidThings.REGISTRATE.addRawLang(translationKey, translations[0]);
 		});
 	}
 

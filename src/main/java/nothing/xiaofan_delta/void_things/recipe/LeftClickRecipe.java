@@ -10,15 +10,15 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
 public class LeftClickRecipe implements Recipe<Container> {
-	private final ResourceLocation id;
+	private final ResourceLocation recipeId;
 	private final ItemStack tool;        // 工具
 	private final ItemStack inputBlock;  // 输入方块
 	private final ItemStack outputBlock; // 输出方块
 	private final ItemStack resultItem;  // 掉落物
 
-	public LeftClickRecipe(ResourceLocation id, ItemStack tool, ItemStack inputBlock,
+	public LeftClickRecipe(ResourceLocation recipeId, ItemStack tool, ItemStack inputBlock,
 	                       ItemStack outputBlock, ItemStack resultItem) {
-		this.id = id;
+		this.recipeId = recipeId;
 		this.tool = tool;
 		this.inputBlock = inputBlock;
 		this.outputBlock = outputBlock;
@@ -34,7 +34,7 @@ public class LeftClickRecipe implements Recipe<Container> {
 	// Recipe 方法
 	@Override
 	public ResourceLocation getId() {
-		return id;
+		return recipeId;
 	}
 
 	@Override

@@ -26,7 +26,7 @@ public final class VoidTooltipEvents {
 
 		event.getToolTip().add(
 				Component.translatable("fluid_type.void_things.water")
-						.withStyle(style -> style.withItalic(true).withStrikethrough(true))
+						.withStyle((style) -> style.withItalic(true).withStrikethrough(true))
 		);
 	}
 }

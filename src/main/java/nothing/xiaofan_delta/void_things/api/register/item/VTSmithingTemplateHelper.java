@@ -19,26 +19,26 @@ public class VTSmithingTemplateHelper {
 	/**
 	 * 生成翻译键.
 	 *
-	 * @param desc 描述后缀
+	 * @param description 描述后缀
 	 * @return 翻译键
 	 */
-	private static String makeDescription(String desc) {
+	private static String makeDescription(String description) {
 		return Util.makeDescriptionId(
 				"item",
-				ResourceLocation.fromNamespaceAndPath(VoidThings.MODID, desc)
+				ResourceLocation.fromNamespaceAndPath(VoidThings.MODID, description)
 		);
 	};
 
 	/**
 	 * 最简创建, 自动生成翻译键.
 	 *
-	 * @param id 模板 ID
+	 * @param templateId 模板 ID
 	 * @param baseSlotIcon Base 槽位图标
 	 * @param additionSlotIcon Addition 槽位图标
 	 * @return 新的 SmithingTemplateItem
 	 */
-	public static SmithingTemplateItem createSimple(String id, ResourceLocation baseSlotIcon, ResourceLocation additionSlotIcon) {
-		String itemId = id + "_smithing_template";
+	public static SmithingTemplateItem createSimple(String templateId, ResourceLocation baseSlotIcon, ResourceLocation additionSlotIcon) {
+		String itemId = templateId + "_smithing_template";
 
 		// 生成翻译键
 		Component appliesTo = Component.translatable(makeDescription(itemId + ".applies_to"));
@@ -96,11 +96,11 @@ public class VTSmithingTemplateHelper {
 	/**
 	 * 获取升级标题翻译键.
 	 *
-	 * @param id 模板 ID
+	 * @param templateId 模板 ID
 	 * @return 翻译键
 	 */
-	public static String getTitleKey(String id) {
-		return Util.makeDescriptionId("upgrade", ResourceLocation.fromNamespaceAndPath(VoidThings.MODID, id));
+	public static String getTitleKey(String templateId) {
+		return Util.makeDescriptionId("upgrade", ResourceLocation.fromNamespaceAndPath(VoidThings.MODID, templateId));
 	}
 
 	/**

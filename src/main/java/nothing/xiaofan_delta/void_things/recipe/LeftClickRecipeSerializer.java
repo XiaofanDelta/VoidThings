@@ -11,18 +11,18 @@ public class LeftClickRecipeSerializer implements RecipeSerializer<LeftClickReci
 	public static final LeftClickRecipeSerializer INSTANCE = new LeftClickRecipeSerializer();
 
 	@Override
-	public LeftClickRecipe fromJson(ResourceLocation id, JsonObject json) {
+	public LeftClickRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
 		// 暂不实现 JSON 读取
 		throw new UnsupportedOperationException("Data-driven not implemented yet");
 	}
 
 	@Override
-	public LeftClickRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buffer) {
+	public LeftClickRecipe fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer) {
 		ItemStack tool = buffer.readItem();
 		ItemStack inputBlock = buffer.readItem();
 		ItemStack outputBlock = buffer.readItem();
 		ItemStack resultItem = buffer.readItem();
-		return new LeftClickRecipe(id, tool, inputBlock, outputBlock, resultItem);
+		return new LeftClickRecipe(recipeId, tool, inputBlock, outputBlock, resultItem);
 	}
 
 	@Override

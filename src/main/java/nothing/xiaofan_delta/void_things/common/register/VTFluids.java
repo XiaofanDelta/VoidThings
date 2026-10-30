@@ -16,14 +16,14 @@ public final class VTFluids {
 						(properties, stillTexture, flowingTexture) ->
 								new VoidWaterFluidType(properties, stillTexture, flowingTexture)
 				)
-				.properties(p -> p
+				.properties((properties) -> properties
 						.density(1000)
 						.viscosity(1000)
 						.canConvertToSource(false)
 						.canDrown(true)
 						.canSwim(true)
 						.supportsBoating(false))
-				.fluidProperties(p -> p
+				.fluidProperties((properties) -> properties
 						.slopeFindDistance(4)
 						.levelDecreasePerBlock(1)
 						.tickRate(5))

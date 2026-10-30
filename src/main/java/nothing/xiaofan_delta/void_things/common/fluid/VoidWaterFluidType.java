@@ -32,10 +32,4 @@ public class VoidWaterFluidType extends BasicFluidType {
 	public int getTintColor() {
 		return 0xFFFFFFFF;
 	}
-
-	@Override
-	public Component getDescription() {
-		return Component.translatable("fluid_type.void_things.water")
-				.withStyle(style -> style.withItalic(true).withStrikethrough(true));
-	}
 }

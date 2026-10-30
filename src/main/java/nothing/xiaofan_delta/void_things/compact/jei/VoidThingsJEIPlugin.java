@@ -13,15 +13,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraft.world.item.crafting.RecipeType;
-
 import net.minecraftforge.registries.ForgeRegistries;
 import nothing.xiaofan_delta.void_things.VoidThings;
 import nothing.xiaofan_delta.void_things.common.register.VTBlocks;
 import nothing.xiaofan_delta.void_things.common.register.VTItems;
-import nothing.xiaofan_delta.void_things.recipe.LeftClickRecipe;
 import nothing.xiaofan_delta.void_things.compact.jei.category.LeftClick;
 import nothing.xiaofan_delta.void_things.config.CommonConfig;
+import nothing.xiaofan_delta.void_things.recipe.LeftClickRecipe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +48,7 @@ public class VoidThingsJEIPlugin implements IModPlugin {
 				RecipeTypes.CRAFTING,
 				recipeManager.getAllRecipesFor(net.minecraft.world.item.crafting.RecipeType.CRAFTING)
 						.stream()
-						.filter(recipe -> recipe.getId().getNamespace().equals(VoidThings.MODID))
+						.filter((recipe) -> recipe.getId().getNamespace().equals(VoidThings.MODID))
 						.toList()
 		);
 
@@ -88,7 +86,6 @@ public class VoidThingsJEIPlugin implements IModPlugin {
 		// 注册配方
 		registration.addRecipes(LeftClick.RECIPE_TYPE, leftClickRecipes);
 	}
-
 
 	@Override
 	public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {

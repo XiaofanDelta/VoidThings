@@ -31,10 +31,10 @@ public class VoidBedrockHandler {
 		// 获取玩家和世界
 		Player player = event.getEntity();
 		Level level = event.getLevel();
-		BlockPos pos = event.getPos();
+		BlockPos blockPos = event.getPos();
 
 		// 检查虚空基岩
-		if (!level.getBlockState(pos).is(VTBlocks.VOID_BEDROCK.get())) {
+		if (!level.getBlockState(blockPos).is(VTBlocks.VOID_BEDROCK.get())) {
 			return;
 		}
 
@@ -51,10 +51,10 @@ public class VoidBedrockHandler {
 		}
 
 		// 替换为基岩
-		level.setBlockAndUpdate(pos, Blocks.BEDROCK.defaultBlockState());
+		level.setBlockAndUpdate(blockPos, Blocks.BEDROCK.defaultBlockState());
 
 		// 生成无之碎片
-		BlockPos dropPos = pos.above(); // 基岩上方
+		BlockPos dropPos = blockPos.above(); // 基岩上方
 		ItemStack shard = new ItemStack(VTItems.EMPTY_SHARD.get(), 1);
 		level.addFreshEntity(new ItemEntity(level,
 				dropPos.getX() + 0.5, // X 居中
@@ -69,7 +69,7 @@ public class VoidBedrockHandler {
 		// 播放音效
 		level.playSound(
 				null,
-				pos,
+				blockPos,
 				SoundEvents.PORTAL_TRIGGER,
 				SoundSource.BLOCKS,
 				1.0F,
@@ -79,7 +79,7 @@ public class VoidBedrockHandler {
 		// 生成粒子
 		if (level instanceof ServerLevel serverLevel) {
 			serverLevel.sendParticles(ParticleTypes.PORTAL,
-					pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+					blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5,
 					30, 0.5, 0.5, 0.5, 0.1);
 		}
 

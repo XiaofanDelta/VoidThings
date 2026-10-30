@@ -24,19 +24,19 @@ public class VoidEggItem extends BasicItem {
 	}
 
 	@Override
-	public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
+	public boolean onEntityItemUpdate(ItemStack eggStack, ItemEntity entity) {
 		Level level = entity.level();
 		if (level.isClientSide()) {
 			return false;
 		}
 
-		BlockPos pos = entity.blockPosition();
-		FluidState fluid = level.getFluidState(pos);
+		BlockPos blockPos = entity.blockPosition();
+		FluidState fluid = level.getFluidState(blockPos);
 		if (!fluid.is(FluidTags.WATER) || !fluid.isSource()) {
 			return false;
 		}
 
-		if (!level.getBlockState(pos).is(Blocks.WATER)) {
+		if (!level.getBlockState(blockPos).is(Blocks.WATER)) {
 			return false;
 		}
 
@@ -46,9 +46,9 @@ public class VoidEggItem extends BasicItem {
 			return false;
 		}
 
-		level.setBlockAndUpdate(pos, waterBlock.defaultBlockState());
-		entity.setItem(new ItemStack(Items.EGG, stack.getCount()));
-		level.playSound(null, pos, SoundEvents.GLASS_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
+		level.setBlockAndUpdate(blockPos, waterBlock.defaultBlockState());
+		entity.setItem(new ItemStack(Items.EGG, eggStack.getCount()));
+		level.playSound(null, blockPos, SoundEvents.GLASS_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
 		return false;
 	}
 }
