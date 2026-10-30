@@ -9,6 +9,7 @@
  - 规范 `docs/Main.md` 排版, 移除标题 emoji, 统一半角标点并修正链接与颜色代码
  - 将 `docs/Main.md` 的开发待办迁移至 `docs/TODO.md`
  - 新增 `docs/Agent.md`, 说明新对话的阅读顺序与 `.dsh-tools` 用途
+ - 新增 `docs/MCR-Legacy/`, 归档旧 MCreator 工程 `more_item` 的设定、可复用脚本与移植说明
 
 ## 0.0.2
  - 重命名模组名为 *【无物】*
@@ -35,6 +36,7 @@
  - Normalized `docs/Main.md` formatting, removed heading emojis, unified punctuation and fixed links/color codes
  - Moved development TODOs from `docs/Main.md` to `docs/TODO.md`
  - Added `docs/Agent.md` for the reading order and `.dsh-tools` usage
+ - Added `docs/MCR-Legacy/` archiving the legacy MCreator project `more_item` with its settings, reusable scripts and porting notes
 
 ## 0.0.2
  - Renamed Mod Name to *Void Things*
