@@ -4,6 +4,11 @@
  - 新增 `暗影残响` 效果
  - 新增 `void_things:egg` 落入原版水源的污染交互
  - 迁移数据生成, 统一生成方块状态/模型/战利品表/语言文件
+ - 更新协作文档 `CONTRIBUTING.md`, 新增版本管理、Dev 模式、Git 提交与叙事规范
+ - 新增 `docs/TODO.md`, 记录待修复的硬编码英文名问题
+ - 规范 `docs/Main.md` 排版, 移除标题 emoji, 统一半角标点并修正链接与颜色代码
+ - 将 `docs/Main.md` 的开发待办迁移至 `docs/TODO.md`
+ - 新增 `docs/Agent.md`, 说明新对话的阅读顺序与 `.dsh-tools` 用途
 
 ## 0.0.2
  - 重命名模组名为 *【无物】*
@@ -25,6 +30,11 @@
  - Added `Darkness Echo` effect
  - Added `void_things:egg` contamination when dropped into vanilla water
  - Migrated data generation for blockstates/models/loot/lang
+ - Updated the `CONTRIBUTING.md` collaboration guide with versioning, dev mode, commit and narrative rules
+ - Added `docs/TODO.md` to track hardcoded language names
+ - Normalized `docs/Main.md` formatting, removed heading emojis, unified punctuation and fixed links/color codes
+ - Moved development TODOs from `docs/Main.md` to `docs/TODO.md`
+ - Added `docs/Agent.md` for the reading order and `.dsh-tools` usage
 
 ## 0.0.2
  - Renamed Mod Name to *Void Things*
