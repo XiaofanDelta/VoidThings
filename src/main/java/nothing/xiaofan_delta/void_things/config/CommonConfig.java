@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -52,15 +53,16 @@ public class CommonConfig {
 		SPEC = builder.build();
 	}
 
-	private static boolean validateItemName(final Object obj) {
-		return obj instanceof String s && ResourceLocation.isValidResourceLocation(s);
+	private static boolean validateItemName(final Object value) {
+		return value instanceof String s && ResourceLocation.isValidResourceLocation(s);
 	}
 
 	@SubscribeEvent
 	static void onLoad(final ModConfigEvent event) {
 		// 解析物品列表
 		VOID_BEDROCK_USABLE_ITEMS_SET = VOID_BEDROCK_USABLE_ITEMS.get().stream()
-				.map(ResourceLocation::new)
+				.map(ResourceLocation::tryParse)
+				.filter(Objects::nonNull)
 				.collect(Collectors.toSet());
 
 		LOGGER.info("【无物】配置已加载！");
