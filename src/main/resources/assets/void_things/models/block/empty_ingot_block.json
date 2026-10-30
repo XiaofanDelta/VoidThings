@@ -5,5 +5,5 @@
 		"top": "void_things:block/material/empty_ingot_blcok/top",
 		"side": "void_things:block/material/empty_ingot_blcok/side"
 	},
-	"render_type": "cutout"
+	"render_type": "cutout_mipped"
 }
